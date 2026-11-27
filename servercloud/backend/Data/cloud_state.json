@@ -1,0 +1,3994 @@
+{
+  "masterVersion": 3,
+  "outlets": [
+    {
+      "outletId": "klinikutama",
+      "name": "Klinik Utama",
+      "type": "Klinik Utama",
+      "isOnline": true,
+      "connectionLabel": "Online",
+      "connectionStatus": "ok",
+      "lastSync": "2 menit lalu",
+      "satuSehatLabel": "Terkirim",
+      "satuSehatStatus": "ok",
+      "bpjsLabel": "VClaim aktif",
+      "bpjsStatus": "ok",
+      "todayVisits": 146,
+      "todayRevenueMillions": 38.2,
+      "pendingSyncCount": 0,
+      "activationCode": "KLN-UTM1-A9",
+      "address": "Jl. Sudirman No. 10, Jakarta",
+      "nib": "912000112233",
+      "status": "Aktif",
+      "satuSehatClientSecret": "enc:aedfda8880cd3d3349a8c7af:08a1301f21da8c5f047e913ee6bc669b:425f3fbd01ba67beae32d325002002d24bb10c5c",
+      "bpjsSecretKey": "enc:539b2aafcb260d608527fc56:3e4277b31ec8dca8e0283ced9eb99ef9:754e4ce646484d3003b2ebfb6ddf8ee19e9a95b8af2a",
+      "bpjsUserKey": "enc:617ba0d30da2061d87a6597c:6935d5dc42da84b83bd508fdec6261fa:e892f0d8e1e2b3cd2ae24080f9f82a2272f12474c765f6349a3f"
+    },
+    {
+      "outletId": "klinikpratama",
+      "name": "Klinik Pratama",
+      "type": "Klinik Pratama",
+      "isOnline": true,
+      "connectionLabel": "Online",
+      "connectionStatus": "ok",
+      "lastSync": "Baru saja",
+      "satuSehatLabel": "Terkirim",
+      "satuSehatStatus": "ok",
+      "bpjsLabel": "P-Care aktif",
+      "bpjsStatus": "ok",
+      "todayVisits": 140,
+      "todayRevenueMillions": 26.85,
+      "pendingSyncCount": 0,
+      "activationCode": "KLN-PRT2-A9",
+      "address": "Jl. Ahmad Yani No. 45, Bekasi",
+      "nib": "912000445566",
+      "status": "Aktif",
+      "satuSehatClientSecret": "enc:578835d91dba86362160a070:7db7b9bfd3150a10d8dd7569848af78f:d2f977337cd041dcf03e3a3bcf4c073bcb8c6f02778b",
+      "bpjsSecretKey": "enc:a3013ea0c90d6a59640482a1:7228c9082545b57813ce85cccf088eb9:700d91995cabd5162202c10fc5ef5515c5b045948ef90db9",
+      "bpjsUserKey": "enc:45c9d7a8381b4bded34112f2:f0e7bc08b181764b60f4c9fd15a50d69:5bddedf9bc4af88ab608bfafd6d64b903a83680836e13a77ab7e81"
+    },
+    {
+      "outletId": "apotek",
+      "name": "Apotek",
+      "type": "Apotek",
+      "isOnline": true,
+      "connectionLabel": "Online",
+      "connectionStatus": "ok",
+      "lastSync": "1 menit lalu",
+      "satuSehatLabel": "Terkirim",
+      "satuSehatStatus": "ok",
+      "bpjsLabel": "PRB aktif",
+      "bpjsStatus": "ok",
+      "todayVisits": 128,
+      "todayRevenueMillions": 21.7,
+      "pendingSyncCount": 0,
+      "activationCode": "KLN-APT3-A9",
+      "address": "Jl. Gatot Subroto No. 88, Depok",
+      "nib": "912000778899",
+      "status": "Aktif",
+      "satuSehatClientSecret": "enc:ba538d04b82470a64292a24c:e9d48acfa45638f427d92d138eee99aa:07b8d00112c6d7bed6693e1618744ff03f998a195f",
+      "bpjsSecretKey": "enc:c417ce672257241de8245cc2:037b2ce2e9cda5a6f99ca2fb4486f35f:775ffbded25e7f1821fcaa46c17a4edd29f52a4f1be742",
+      "bpjsUserKey": "enc:d3284b5d77bdd4d84ba4eaad:8329ecba8c7d3d1d4e594dd0f8998739:9cd1c642c0889599f79a2761bb5c3230eb180789911d2058"
+    },
+    {
+      "outletId": "klinik-cabang-bekasi",
+      "name": "Klinik Cabang Bekasi",
+      "type": "Klinik Utama",
+      "isOnline": true,
+      "connectionLabel": "Online",
+      "connectionStatus": "ok",
+      "lastSync": "Baru saja",
+      "satuSehatLabel": "Belum Konfigurasi",
+      "satuSehatStatus": "warn",
+      "bpjsLabel": "VClaim aktif",
+      "bpjsStatus": "warn",
+      "todayVisits": 0,
+      "todayRevenueMillions": 0,
+      "pendingSyncCount": 0,
+      "activationCode": "KLN-G631-A9",
+      "address": "Bekasi",
+      "nib": "91203018201",
+      "phone": "",
+      "adminEmail": "",
+      "satuSehatEnv": "Sandbox",
+      "satuSehatOrgId": "",
+      "satuSehatLocId": "",
+      "satuSehatClientId": "",
+      "satuSehatClientSecret": "",
+      "bpjsServiceType": "VClaim (FKRTL)",
+      "bpjsEnv": "Development",
+      "bpjsPpkCode": "",
+      "bpjsConsId": "",
+      "bpjsSecretKey": "",
+      "bpjsUserKey": "",
+      "status": "Aktif"
+    }
+  ],
+  "users": [
+    {
+      "id": "USR-00",
+      "name": "Owner / Direktur",
+      "role": "Owner / Direktur (Semua Akses)",
+      "outlet": "Semua",
+      "status": "Aktif",
+      "syncStatus": "Tersinkron",
+      "email": "owner@klinik.id",
+      "nik": "3171000000000001",
+      "strSip": "-",
+      "strExpiry": "-",
+      "ihsId": "-",
+      "passwordHash": "scrypt:47609000729654a9850cb49fed986444:8aa359d18784ef54ba7ce68b67d04cde8e472293899e115c7715e9b23b907b83",
+      "allowedOutlets": [
+        "Klinik Utama",
+        "Klinik Pratama",
+        "Apotek",
+        "Klinik Cabang Bekasi"
+      ]
+    },
+    {
+      "id": "USR-01",
+      "name": "Dr. Andi Wijaya",
+      "role": "Dokter",
+      "outlet": "Klinik Utama",
+      "status": "Aktif",
+      "syncStatus": "Tersinkron",
+      "email": "andi@klinik.id",
+      "nik": "3171010101850001",
+      "strSip": "STR-8821921",
+      "passwordHash": "scrypt:ddbe06e0b459ddfb4f82e070058f8fdf:ff2f58b1cc5ef1eced42b4f144beecf99733b621d4c976b3d4d3920fd1cc287b",
+      "allowedOutlets": [
+        "Klinik Utama"
+      ]
+    },
+    {
+      "id": "USR-02",
+      "name": "Sari Lestari",
+      "role": "Apoteker",
+      "outlet": "Apotek",
+      "status": "Aktif",
+      "syncStatus": "Tersinkron",
+      "email": "sari@klinik.id",
+      "nik": "3171010202900002",
+      "strSip": "STRA-9912011",
+      "passwordHash": "scrypt:ef7a4cf04cc7b41fa1a1a3854401fec3:4e6b24ccaf28eddc25b3e520b3cc66f09835de6187e745a52d503cb1e9c0d566",
+      "allowedOutlets": [
+        "Apotek"
+      ]
+    },
+    {
+      "id": "USR-03",
+      "name": "Rina Putri",
+      "role": "Pendaftaran",
+      "outlet": "Klinik Pratama",
+      "status": "Aktif",
+      "syncStatus": "Tersinkron",
+      "email": "rina@klinik.id",
+      "nik": "3275010303950003",
+      "strSip": "-",
+      "passwordHash": "scrypt:c8ec6db48f1fa7e091790e0ad723c19b:2cb6fc6a3b5396ade39cd1762a5bde42f273c0bd633d83903128fd5d5799af98",
+      "allowedOutlets": [
+        "Klinik Pratama"
+      ]
+    },
+    {
+      "id": "USR-04",
+      "name": "Budi Santoso",
+      "role": "Kasir",
+      "outlet": "Klinik Utama",
+      "status": "Nonaktif",
+      "syncStatus": "Tersinkron",
+      "email": "budi@klinik.id",
+      "nik": "3171010404880004",
+      "strSip": "-",
+      "passwordHash": "scrypt:b03d2facf0573369b996b5dd648323fd:f8a3d3099cbc06239ace307353abeae3336c581c6c3335e2b12e05abb30fdef1",
+      "allowedOutlets": [
+        "Klinik Utama"
+      ]
+    }
+  ],
+  "inventoryItems": [
+    {
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "category": "Antibiotik",
+      "centralStock": 4500,
+      "unit": "Tablet",
+      "price": "Rp 1.500",
+      "expiredDate": "2028-05-01"
+    },
+    {
+      "code": "KFA-93002",
+      "name": "Paracetamol 500mg Tablet",
+      "category": "Analgesik",
+      "centralStock": 8200,
+      "unit": "Tablet",
+      "price": "Rp 800",
+      "expiredDate": "2028-11-15"
+    },
+    {
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "category": "Antibiotik",
+      "centralStock": 1600,
+      "unit": "Kapsul",
+      "price": "Rp 4.200",
+      "expiredDate": "2027-09-20"
+    },
+    {
+      "code": "KFA-93004",
+      "name": "Omeprazole 20mg Kapsul",
+      "category": "Gastrointestinal",
+      "centralStock": 3100,
+      "unit": "Kapsul",
+      "price": "Rp 2.100",
+      "expiredDate": "2028-02-10"
+    },
+    {
+      "code": "KFA-93005",
+      "name": "Infus RL 500ml",
+      "category": "Cairan Infus",
+      "centralStock": 850,
+      "unit": "Botol",
+      "price": "Rp 18.500",
+      "expiredDate": "2027-12-30"
+    }
+  ],
+  "journalEntries": [
+    {
+      "code": "JRN-0225",
+      "date": "2026-11-27 04:35",
+      "outlet": "Klinik Pratama",
+      "accountDebit": "1101 - Kas & Bank Cabang",
+      "accountCredit": "4101 - Pendapatan Layanan Medis",
+      "description": "Pembayaran INV-PRT-108 - Tn. Wahyu (Rp 350.000)",
+      "amount": "Rp 350.000",
+      "status": "Tersinkron Otomatis",
+      "amountRp": 350000,
+      "source": "Auto-Sync",
+      "lines": [
+        {
+          "accountCode": "1101",
+          "accountName": "1101 - Kas & Bank Cabang",
+          "debit": 350000,
+          "credit": 0
+        },
+        {
+          "accountCode": "4101",
+          "accountName": "4101 - Pendapatan Layanan Medis",
+          "debit": 0,
+          "credit": 350000
+        }
+      ]
+    },
+    {
+      "code": "JRN-0901",
+      "date": "2026-11-27 08:45",
+      "outlet": "Klinik Utama",
+      "description": "Pendapatan Kasir Rawat Jalan & Inap (Auto-Sync)",
+      "amount": "Rp 38.200.000",
+      "status": "Tersinkron Otomatis",
+      "amountRp": 38200000,
+      "source": "Auto-Sync",
+      "lines": [
+        {
+          "accountCode": "1101",
+          "accountName": "1101 - Kas & Bank",
+          "debit": 38200000,
+          "credit": 0
+        },
+        {
+          "accountCode": "4101",
+          "accountName": "4101 - Pendapatan",
+          "debit": 0,
+          "credit": 38200000
+        }
+      ]
+    },
+    {
+      "code": "JRN-0902",
+      "date": "2026-11-27 08:50",
+      "outlet": "Apotek",
+      "description": "Penjualan Resep & OTC Harian (Auto-Sync)",
+      "amount": "Rp 21.700.000",
+      "status": "Tersinkron Otomatis",
+      "amountRp": 21700000,
+      "source": "Auto-Sync",
+      "lines": [
+        {
+          "accountCode": "1101",
+          "accountName": "1101 - Kas & Bank",
+          "debit": 21700000,
+          "credit": 0
+        },
+        {
+          "accountCode": "4101",
+          "accountName": "4101 - Pendapatan",
+          "debit": 0,
+          "credit": 21700000
+        }
+      ]
+    },
+    {
+      "code": "JRN-0903",
+      "date": "2026-11-27 08:00",
+      "outlet": "Klinik Pratama",
+      "description": "Pendapatan Kasir Pagi (Sebelum Offline)",
+      "amount": "Rp 26.500.000",
+      "status": "Tersinkron Otomatis",
+      "amountRp": 26500000,
+      "source": "Auto-Sync",
+      "lines": [
+        {
+          "accountCode": "1101",
+          "accountName": "1101 - Kas & Bank",
+          "debit": 26500000,
+          "credit": 0
+        },
+        {
+          "accountCode": "4101",
+          "accountName": "4101 - Pendapatan",
+          "debit": 0,
+          "credit": 26500000
+        }
+      ]
+    }
+  ],
+  "syncLogs": [
+    {
+      "id": "TRF-7555",
+      "timestamp": "14:45:47",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Klinik Utama",
+      "entityType": "MutasiStokPusat",
+      "summary": "Distribusi Infus RL 500ml (100 unit, Batch IRL-2512X) ke Klinik Utama",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "TRF-6331",
+      "timestamp": "14:45:46",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Apotek",
+      "entityType": "MutasiStokPusat",
+      "summary": "Distribusi Cefixime 100mg Kapsul (200 unit, Batch CFX-2512K) ke Apotek",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-0977-50",
+      "timestamp": "14:40:00",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Klinik Pratama",
+      "entityType": "RemoteCommand",
+      "summary": "Eksekusi perintah remote FORCE_SYNC ke server lokal Klinik Pratama",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-9276-90",
+      "timestamp": "14:39:59",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Klinik Utama",
+      "entityType": "RemoteCommand",
+      "summary": "Eksekusi perintah remote FORCE_SYNC ke server lokal Klinik Utama",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-8162-96",
+      "timestamp": "14:39:58",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Klinik Utama",
+      "entityType": "RemoteCommand",
+      "summary": "Eksekusi perintah remote FORCE_SYNC ke server lokal Klinik Utama",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-0195",
+      "timestamp": "13:43:30",
+      "direction": "CLOUD",
+      "outlet": "Klinik Cabang Bekasi",
+      "entityType": "OutletBaru",
+      "summary": "Outlet baru dibuat (Klinik Utama) · Kode: KLN-G631-A9 · PPK: -",
+      "status": "Aktif"
+    },
+    {
+      "id": "SYN-PRT-93",
+      "timestamp": "11:35:40",
+      "direction": "LOKAL -> CLOUD",
+      "outlet": "Klinik Pratama",
+      "entityType": "Kasir",
+      "summary": "Pembayaran INV-PRT-108 - Tn. Wahyu (Rp 350.000)",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-PRT-92",
+      "timestamp": "11:35:40",
+      "direction": "LOKAL -> CLOUD",
+      "outlet": "Klinik Pratama",
+      "entityType": "Rawat Jalan",
+      "summary": "Pemeriksaan SOAP & Resep: Siti Aminah (J06.9 - ISPA)",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-PRT-91",
+      "timestamp": "11:35:40",
+      "direction": "LOKAL -> CLOUD",
+      "outlet": "Klinik Pratama",
+      "entityType": "Pendaftaran",
+      "summary": "Kunjungan P-Care BPJS: Siti Aminah (RM-20014) - Poli Umum",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-101",
+      "timestamp": "08:51:10",
+      "direction": "LOKAL -> CLOUD",
+      "outlet": "Apotek",
+      "entityType": "Penjualan",
+      "summary": "128 Transaksi POS & Stok Obat Batch",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-102",
+      "timestamp": "08:50:22",
+      "direction": "LOKAL -> CLOUD",
+      "outlet": "Klinik Utama",
+      "entityType": "Kunjungan",
+      "summary": "146 Kunjungan RME, SEP VClaim & Kasir",
+      "status": "Tersinkron"
+    },
+    {
+      "id": "SYN-103",
+      "timestamp": "08:05:14",
+      "direction": "CLOUD -> LOKAL",
+      "outlet": "Klinik Pratama",
+      "entityType": "UserOutlet",
+      "summary": "User Rina Putri menunggu cabang kembali online",
+      "status": "Menunggu (Offline)"
+    }
+  ],
+  "stockRequests": [
+    {
+      "reqId": "REQ-CAB-01",
+      "date": "2026-11-27 08:30",
+      "outletId": "apotek",
+      "outletName": "Apotek",
+      "itemCode": "KFA-93003",
+      "itemName": "Cefixime 100mg Kapsul",
+      "qty": 200,
+      "status": "Dikirim ke Cabang"
+    },
+    {
+      "reqId": "REQ-CAB-02",
+      "date": "2026-11-27 08:45",
+      "outletId": "klinikutama",
+      "outletName": "Klinik Utama",
+      "itemCode": "KFA-93005",
+      "itemName": "Infus RL 500ml",
+      "qty": 100,
+      "status": "Dikirim ke Cabang"
+    }
+  ],
+  "approvedTransfers": [
+    {
+      "transferId": "TRF-6331",
+      "reqId": "REQ-CAB-01",
+      "outletId": "apotek",
+      "outletName": "Apotek",
+      "itemCode": "KFA-93003",
+      "itemName": "Cefixime 100mg Kapsul",
+      "batchNo": "CFX-2512K",
+      "qty": 200,
+      "approvedAt": "14:45:46"
+    },
+    {
+      "transferId": "TRF-7554",
+      "reqId": "REQ-CAB-02",
+      "outletId": "klinikutama",
+      "outletName": "Klinik Utama",
+      "itemCode": "KFA-93005",
+      "itemName": "Infus RL 500ml",
+      "batchNo": "IRL-2512X",
+      "qty": 100,
+      "approvedAt": "14:45:47"
+    }
+  ],
+  "doctorFees": [
+    {
+      "doctorName": "Dr. Andi Wijaya",
+      "outlet": "Klinik Utama",
+      "strSip": "STR-8821921",
+      "patientsCount": 84,
+      "visiteCount": 14,
+      "feeMillions": 14.8,
+      "status": "Terverifikasi"
+    },
+    {
+      "doctorName": "Dr. Hendra Kusuma",
+      "outlet": "Klinik Pratama",
+      "strSip": "STR-7741209",
+      "patientsCount": 76,
+      "visiteCount": 6,
+      "feeMillions": 11.4,
+      "status": "Terverifikasi"
+    },
+    {
+      "doctorName": "drg. Maya Putri",
+      "outlet": "Klinik Pratama",
+      "strSip": "STRG-6612098",
+      "patientsCount": 42,
+      "visiteCount": 0,
+      "feeMillions": 6.3,
+      "status": "Terverifikasi"
+    }
+  ],
+  "bpjsClaims": [
+    {
+      "claimNo": "KLM-BPJS-1101",
+      "outlet": "Klinik Utama",
+      "program": "VClaim Rawat Jalan & Inap (SEP)",
+      "totalCases": 92,
+      "amountMillions": 24.5,
+      "status": "Layak Klaim (Verifikasi)"
+    },
+    {
+      "claimNo": "KLM-BPJS-1102",
+      "outlet": "Klinik Pratama",
+      "program": "Kapitasi & Non-Kapitasi P-Care",
+      "totalCases": 88,
+      "amountMillions": 15.2,
+      "status": "Menunggu Sinkron Cabang"
+    },
+    {
+      "claimNo": "KLM-BPJS-1103",
+      "outlet": "Apotek",
+      "program": "Klaim Obat Kronis & PRB",
+      "totalCases": 54,
+      "amountMillions": 8.9,
+      "status": "Disetujui BPJS"
+    }
+  ],
+  "outletTemplates": [
+    {
+      "outletType": "Klinik Utama (Rawat Inap & Jalan)",
+      "description": "FKRTL lengkap dengan Rawat Jalan, Rawat Inap, IGD, Penunjang Medis (Lab/Rad/Fisio), Farmasi & VClaim + Aplicares",
+      "modules": [
+        {
+          "code": "DB",
+          "name": "Dashboard Outlet",
+          "enabled": true,
+          "items": [
+            "Ringkasan Hari Ini",
+            "Status Koneksi",
+            "Antrean Sinkronisasi"
+          ]
+        },
+        {
+          "code": "PD",
+          "name": "Pendaftaran",
+          "enabled": true,
+          "items": [
+            "Pasien Baru/Lama",
+            "Verifikasi BPJS",
+            "Validasi NIK & IHS",
+            "Antrean Online",
+            "Rujukan Masuk",
+            "Admisi & SEP"
+          ]
+        },
+        {
+          "code": "RJ",
+          "name": "Rawat Jalan",
+          "enabled": true,
+          "items": [
+            "Antrean Poli",
+            "Pemeriksaan SOAP",
+            "Diagnosa & Tindakan",
+            "Resep Elektronik",
+            "Order Lab/Radiologi",
+            "Rujukan Keluar"
+          ]
+        },
+        {
+          "code": "RI",
+          "name": "Rawat Inap",
+          "enabled": true,
+          "items": [
+            "Kamar & Tempat Tidur",
+            "Pasien Rawat Inap",
+            "CPPT & Asuhan",
+            "Visite Dokter",
+            "Pindah Kamar",
+            "Pulang"
+          ]
+        },
+        {
+          "code": "GD",
+          "name": "IGD",
+          "enabled": true,
+          "items": [
+            "Triase",
+            "Penanganan Gawat Darurat"
+          ]
+        },
+        {
+          "code": "RM",
+          "name": "Rekam Medis",
+          "enabled": true,
+          "items": [
+            "RME",
+            "Riwayat Pasien",
+            "Pengkodean Diagnosa",
+            "Resume Medis",
+            "Informed Consent"
+          ]
+        },
+        {
+          "code": "PM",
+          "name": "Penunjang Medis",
+          "enabled": true,
+          "items": [
+            "Laboratorium",
+            "Radiologi",
+            "Fisioterapi"
+          ]
+        },
+        {
+          "code": "FA",
+          "name": "Farmasi",
+          "enabled": true,
+          "items": [
+            "Resep Masuk",
+            "Penyerahan Obat",
+            "Stok Farmasi",
+            "Retur & Expired"
+          ]
+        },
+        {
+          "code": "KS",
+          "name": "Kasir",
+          "enabled": true,
+          "items": [
+            "Tagihan Pasien",
+            "Pembayaran & Deposit",
+            "Tutup Kasir",
+            "Refund"
+          ]
+        },
+        {
+          "code": "BP",
+          "name": "BPJS Kesehatan",
+          "enabled": true,
+          "items": [
+            "Cek Kepesertaan",
+            "SEP",
+            "Rujukan VClaim",
+            "Antrean Mobile JKN",
+            "Aplicares",
+            "Log Bridging"
+          ]
+        },
+        {
+          "code": "SS",
+          "name": "SATUSEHAT",
+          "enabled": true,
+          "items": [
+            "Status Kirim per Pasien",
+            "Antrean Kirim FHIR",
+            "Kirim Ulang Gagal",
+            "Pencocokan IHS Number"
+          ]
+        }
+      ]
+    },
+    {
+      "outletType": "Klinik Utama (Rawat Jalan)",
+      "description": "FKRTL khusus Rawat Jalan Spesialis, Penunjang Medis (Lab/Rad/Fisio), Farmasi & VClaim Rawat Jalan (tanpa Rawat Inap/IGD)",
+      "modules": [
+        {
+          "code": "DB",
+          "name": "Dashboard Outlet",
+          "enabled": true,
+          "items": [
+            "Ringkasan Hari Ini",
+            "Status Koneksi",
+            "Antrean Sinkronisasi"
+          ]
+        },
+        {
+          "code": "PD",
+          "name": "Pendaftaran",
+          "enabled": true,
+          "items": [
+            "Pasien Baru/Lama",
+            "Verifikasi BPJS",
+            "Validasi NIK & IHS",
+            "Antrean Online",
+            "Rujukan Masuk"
+          ]
+        },
+        {
+          "code": "RJ",
+          "name": "Rawat Jalan",
+          "enabled": true,
+          "items": [
+            "Antrean Poli",
+            "Pemeriksaan SOAP",
+            "Diagnosa & Tindakan",
+            "Resep Elektronik",
+            "Order Lab/Radiologi",
+            "Rujukan Keluar"
+          ]
+        },
+        {
+          "code": "RM",
+          "name": "Rekam Medis",
+          "enabled": true,
+          "items": [
+            "RME",
+            "Riwayat Pasien",
+            "Pengkodean Diagnosa",
+            "Resume Medis",
+            "Informed Consent"
+          ]
+        },
+        {
+          "code": "PM",
+          "name": "Penunjang Medis",
+          "enabled": true,
+          "items": [
+            "Laboratorium",
+            "Radiologi",
+            "Fisioterapi"
+          ]
+        },
+        {
+          "code": "FA",
+          "name": "Farmasi",
+          "enabled": true,
+          "items": [
+            "Resep Masuk",
+            "Penyerahan Obat",
+            "Stok Farmasi",
+            "Retur & Expired"
+          ]
+        },
+        {
+          "code": "KS",
+          "name": "Kasir",
+          "enabled": true,
+          "items": [
+            "Tagihan Pasien",
+            "Pembayaran & Deposit",
+            "Tutup Kasir",
+            "Refund"
+          ]
+        },
+        {
+          "code": "BP",
+          "name": "BPJS Kesehatan",
+          "enabled": true,
+          "items": [
+            "Cek Kepesertaan",
+            "SEP",
+            "Rujukan VClaim",
+            "Antrean Mobile JKN",
+            "Log Bridging"
+          ]
+        },
+        {
+          "code": "SS",
+          "name": "SATUSEHAT",
+          "enabled": true,
+          "items": [
+            "Status Kirim per Pasien",
+            "Antrean Kirim FHIR",
+            "Kirim Ulang Gagal",
+            "Pencocokan IHS Number"
+          ]
+        }
+      ]
+    },
+    {
+      "outletType": "Klinik Pratama (Rawat Inap & Jalan)",
+      "description": "FKTP dengan layanan Rawat Jalan, Rawat Inap Tingkat Pertama, Persalinan/IGD Dasar, Farmasi & P-Care",
+      "modules": [
+        {
+          "code": "DB",
+          "name": "Dashboard Outlet",
+          "enabled": true,
+          "items": [
+            "Ringkasan Hari Ini",
+            "Status Koneksi",
+            "Antrean Sinkronisasi"
+          ]
+        },
+        {
+          "code": "PD",
+          "name": "Pendaftaran",
+          "enabled": true,
+          "items": [
+            "Pasien Baru/Lama",
+            "Verifikasi BPJS",
+            "Validasi NIK & IHS",
+            "Antrean Online",
+            "Rujukan Masuk",
+            "Admisi Rawat Inap"
+          ]
+        },
+        {
+          "code": "RJ",
+          "name": "Rawat Jalan",
+          "enabled": true,
+          "items": [
+            "Antrean Poli",
+            "Pemeriksaan SOAP",
+            "Diagnosa & Tindakan",
+            "Resep Elektronik",
+            "Rujukan Keluar"
+          ]
+        },
+        {
+          "code": "RI",
+          "name": "Rawat Inap",
+          "enabled": true,
+          "items": [
+            "Kamar & Tempat Tidur",
+            "Pasien Rawat Inap",
+            "CPPT & Asuhan",
+            "Visite Dokter",
+            "Pindah Kamar",
+            "Pulang"
+          ]
+        },
+        {
+          "code": "GD",
+          "name": "IGD",
+          "enabled": true,
+          "items": [
+            "Triase",
+            "Penanganan Gawat Darurat"
+          ]
+        },
+        {
+          "code": "RM",
+          "name": "Rekam Medis",
+          "enabled": true,
+          "items": [
+            "RME",
+            "Riwayat Pasien",
+            "Pengkodean Diagnosa",
+            "Resume Medis",
+            "Informed Consent"
+          ]
+        },
+        {
+          "code": "FA",
+          "name": "Farmasi",
+          "enabled": true,
+          "items": [
+            "Resep Masuk",
+            "Penyerahan Obat",
+            "Stok Farmasi",
+            "Retur & Expired"
+          ]
+        },
+        {
+          "code": "KS",
+          "name": "Kasir",
+          "enabled": true,
+          "items": [
+            "Tagihan Pasien",
+            "Pembayaran & Deposit",
+            "Tutup Kasir",
+            "Refund"
+          ]
+        },
+        {
+          "code": "BP",
+          "name": "BPJS Kesehatan",
+          "enabled": true,
+          "items": [
+            "Cek Kepesertaan",
+            "P-Care Kunjungan",
+            "Rujukan",
+            "Prolanis & Skrining",
+            "Log Bridging"
+          ]
+        },
+        {
+          "code": "SS",
+          "name": "SATUSEHAT",
+          "enabled": true,
+          "items": [
+            "Status Kirim per Pasien",
+            "Antrean Kirim FHIR",
+            "Kirim Ulang Gagal",
+            "Pencocokan IHS Number"
+          ]
+        }
+      ]
+    },
+    {
+      "outletType": "Klinik Pratama (Rawat Jalan)",
+      "description": "FKTP khusus Rawat Jalan, Poli Umum/Gigi, Farmasi Dasar, P-Care & Antrol FKTP (tanpa Rawat Inap)",
+      "modules": [
+        {
+          "code": "DB",
+          "name": "Dashboard Outlet",
+          "enabled": true,
+          "items": [
+            "Ringkasan Hari Ini",
+            "Status Koneksi",
+            "Antrean Sinkronisasi"
+          ]
+        },
+        {
+          "code": "PD",
+          "name": "Pendaftaran",
+          "enabled": true,
+          "items": [
+            "Pasien Baru/Lama",
+            "Verifikasi BPJS",
+            "Validasi NIK & IHS",
+            "Antrean Online",
+            "Rujukan Masuk"
+          ]
+        },
+        {
+          "code": "RJ",
+          "name": "Rawat Jalan",
+          "enabled": true,
+          "items": [
+            "Antrean Poli",
+            "Pemeriksaan SOAP",
+            "Diagnosa & Tindakan",
+            "Resep Elektronik",
+            "Rujukan Keluar"
+          ]
+        },
+        {
+          "code": "RM",
+          "name": "Rekam Medis",
+          "enabled": true,
+          "items": [
+            "RME",
+            "Riwayat Pasien",
+            "Pengkodean Diagnosa",
+            "Resume Medis",
+            "Informed Consent"
+          ]
+        },
+        {
+          "code": "FA",
+          "name": "Farmasi",
+          "enabled": true,
+          "items": [
+            "Resep Masuk",
+            "Penyerahan Obat",
+            "Stok Farmasi",
+            "Retur & Expired"
+          ]
+        },
+        {
+          "code": "KS",
+          "name": "Kasir",
+          "enabled": true,
+          "items": [
+            "Tagihan Pasien",
+            "Pembayaran & Deposit",
+            "Tutup Kasir",
+            "Refund"
+          ]
+        },
+        {
+          "code": "BP",
+          "name": "BPJS Kesehatan",
+          "enabled": true,
+          "items": [
+            "Cek Kepesertaan",
+            "P-Care Kunjungan",
+            "Rujukan",
+            "Prolanis & Skrining",
+            "Log Bridging"
+          ]
+        },
+        {
+          "code": "SS",
+          "name": "SATUSEHAT",
+          "enabled": true,
+          "items": [
+            "Status Kirim per Pasien",
+            "Antrean Kirim FHIR",
+            "Kirim Ulang Gagal",
+            "Pencocokan IHS Number"
+          ]
+        }
+      ]
+    },
+    {
+      "outletType": "Apotek",
+      "description": "POS Resep & OTC, Pelayanan Farmasi Klinis, Register Narkotika, FEFO & BPJS PRB",
+      "modules": [
+        {
+          "code": "DB",
+          "name": "Dashboard Outlet",
+          "enabled": true,
+          "items": [
+            "Ringkasan Hari Ini",
+            "Status Koneksi",
+            "Antrean Sinkronisasi"
+          ]
+        },
+        {
+          "code": "PJ",
+          "name": "Penjualan",
+          "enabled": true,
+          "items": [
+            "Resep",
+            "Penjualan Bebas (OTC)",
+            "Retur Penjualan",
+            "Cek Stok Cepat"
+          ]
+        },
+        {
+          "code": "KS",
+          "name": "Kasir",
+          "enabled": true,
+          "items": [
+            "Transaksi",
+            "Tutup Kasir"
+          ]
+        },
+        {
+          "code": "FA",
+          "name": "Pelayanan Farmasi",
+          "enabled": true,
+          "items": [
+            "Telaah Resep",
+            "Peracikan",
+            "Etiket & Info Obat",
+            "Narkotika/Psikotropika"
+          ]
+        },
+        {
+          "code": "SO",
+          "name": "Stok Obat",
+          "enabled": true,
+          "items": [
+            "Stok per Batch",
+            "Penerimaan Barang",
+            "Permintaan ke Pusat",
+            "Mutasi & Opname",
+            "Obat Rusak/Expired"
+          ]
+        },
+        {
+          "code": "IT",
+          "name": "Integrasi",
+          "enabled": true,
+          "items": [
+            "SATUSEHAT Medication",
+            "BPJS PRB"
+          ]
+        },
+        {
+          "code": "LA",
+          "name": "Laporan Apotek",
+          "enabled": true,
+          "items": [
+            "Penjualan",
+            "Stok",
+            "Laba",
+            "Narkotika/Psikotropika",
+            "Obat Terlaris"
+          ]
+        }
+      ]
+    }
+  ],
+  "outletSettings": {
+    "klinikutama": {
+      "operatingHours": "07:00 - 21:00 (IGD 24 Jam)",
+      "syncIntervalSec": 15,
+      "autoSync": true,
+      "localServerUrl": "http://localhost:5181",
+      "coaPrefix": "101",
+      "receiptFooter": "Terima kasih telah mempercayakan kesehatan Anda di Klinik Utama.",
+      "activePolis": [
+        "Poli Penyakit Dalam",
+        "Poli Anak",
+        "Poli Bedah",
+        "Poli Gigi",
+        "IGD 24 Jam"
+      ]
+    },
+    "klinikpratama": {
+      "operatingHours": "08:00 - 20:00",
+      "syncIntervalSec": 20,
+      "autoSync": true,
+      "localServerUrl": "http://localhost:5182",
+      "coaPrefix": "102",
+      "receiptFooter": "Lekas sembuh bersama Klinik Pratama Sehat.",
+      "activePolis": [
+        "Poli Umum",
+        "Poli Gigi",
+        "KIA / KB"
+      ]
+    },
+    "apotek": {
+      "operatingHours": "08:00 - 22:00",
+      "syncIntervalSec": 15,
+      "autoSync": true,
+      "localServerUrl": "http://localhost:5183",
+      "coaPrefix": "103",
+      "receiptFooter": "Obat terjamin asli berstandar KFA. Konsultasikan dengan Apoteker.",
+      "activePolis": [
+        "Resep Racik",
+        "Resep Non-Racik",
+        "Penjualan OTC",
+        "PRB BPJS"
+      ]
+    },
+    "klinik-cabang-bekasi": {
+      "operatingHours": "08:00 - 20:00",
+      "syncIntervalSec": 20,
+      "autoSync": true,
+      "localServerUrl": "http://localhost:5185",
+      "coaPrefix": "104",
+      "receiptFooter": "Terima kasih telah berkunjung ke Klinik Cabang Bekasi.",
+      "activePolis": [
+        "Poli Umum"
+      ]
+    }
+  },
+  "licenses": [
+    {
+      "licenseId": "LIC-001",
+      "outletId": "klinikutama",
+      "outletName": "Klinik Utama",
+      "activationCode": "KLN-UTM1-A9",
+      "tier": "Enterprise FKRTL",
+      "maxUsers": 50,
+      "validUntil": "2027-12-31",
+      "deviceFingerprint": "WIN-SRV-UTM-88A1",
+      "status": "Aktif"
+    },
+    {
+      "licenseId": "LIC-002",
+      "outletId": "klinikpratama",
+      "outletName": "Klinik Pratama",
+      "activationCode": "KLN-PRT2-A9",
+      "tier": "Pro FKTP",
+      "maxUsers": 25,
+      "validUntil": "2027-08-31",
+      "deviceFingerprint": "WIN-SRV-PRT-44C2",
+      "status": "Aktif"
+    },
+    {
+      "licenseId": "LIC-003",
+      "outletId": "apotek",
+      "outletName": "Apotek",
+      "activationCode": "KLN-APT3-A9",
+      "tier": "Apotek POS & PRB",
+      "maxUsers": 15,
+      "validUntil": "2027-10-15",
+      "deviceFingerprint": "WIN-SRV-APT-19F0",
+      "status": "Aktif"
+    },
+    {
+      "licenseId": "LIC-KLINIK",
+      "outletId": "klinik-cabang-bekasi",
+      "outletName": "Klinik Cabang Bekasi",
+      "activationCode": "KLN-G631-A9",
+      "tier": "Standard",
+      "maxUsers": 25,
+      "validUntil": "2027-12-31",
+      "deviceFingerprint": "MENUNGGU-PAIRING",
+      "status": "Menunggu Aktivasi"
+    }
+  ],
+  "employees": [
+    {
+      "id": "EMP-001",
+      "nip": "20230101",
+      "name": "Dr. Andi Wijaya, Sp.PD",
+      "nik": "3171010101850001",
+      "department": "Medis & Poliklinik",
+      "position": "Dokter Spesialis Penyakit Dalam",
+      "employmentStatus": "Mitra",
+      "outlet": "Klinik Utama",
+      "joinDate": "2023-01-15",
+      "phone": "0812-8800-1101",
+      "bankAccount": "BCA 5210-889100",
+      "baseSalary": 12000000,
+      "status": "Aktif"
+    },
+    {
+      "id": "EMP-002",
+      "nip": "20230410",
+      "name": "Sari Lestari, S.Farm., Apt.",
+      "nik": "3171010202900002",
+      "department": "Farmasi",
+      "position": "Apoteker Penanggung Jawab",
+      "employmentStatus": "Tetap",
+      "outlet": "Apotek",
+      "joinDate": "2023-04-10",
+      "phone": "0812-8800-2202",
+      "bankAccount": "Mandiri 12400-771234",
+      "baseSalary": 7500000,
+      "status": "Aktif"
+    },
+    {
+      "id": "EMP-003",
+      "nip": "20240201",
+      "name": "Rina Putri",
+      "nik": "3275010303950003",
+      "department": "Front Office",
+      "position": "Staf Pendaftaran & BPJS",
+      "employmentStatus": "Tetap",
+      "outlet": "Klinik Pratama",
+      "joinDate": "2024-02-01",
+      "phone": "0813-9900-3303",
+      "bankAccount": "BRI 0342-01-88912",
+      "baseSalary": 4800000,
+      "status": "Aktif"
+    },
+    {
+      "id": "EMP-004",
+      "nip": "20230715",
+      "name": "Dr. Hendra Kusuma",
+      "nik": "3275010808820001",
+      "department": "Medis & Poliklinik",
+      "position": "Dokter Umum (PJ FKTP)",
+      "employmentStatus": "Mitra",
+      "outlet": "Klinik Pratama",
+      "joinDate": "2023-07-15",
+      "phone": "0811-7700-4404",
+      "bankAccount": "BCA 5210-992311",
+      "baseSalary": 9000000,
+      "status": "Aktif"
+    },
+    {
+      "id": "EMP-005",
+      "nip": "20240520",
+      "name": "Budi Santoso",
+      "nik": "3171010404880004",
+      "department": "Keuangan Cabang",
+      "position": "Kasir Shift Sore",
+      "employmentStatus": "Kontrak",
+      "outlet": "Klinik Utama",
+      "joinDate": "2024-05-20",
+      "phone": "0856-1122-5505",
+      "bankAccount": "BNI 0812-331900",
+      "baseSalary": 4500000,
+      "status": "Nonaktif"
+    }
+  ],
+  "rolePermissions": [
+    {
+      "role": "Owner / Direktur",
+      "scope": "Cloud VPS (Semua Cabang)",
+      "modules": "Semua 12 Grup Modul (Full Control)",
+      "status": "Full Access",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "MO": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "HR": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "KE": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "AK": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "approve": true,
+          "export": true
+        },
+        "PU": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "IN": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "GA": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "MK": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "IT": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "LP": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "PS": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        }
+      }
+    },
+    {
+      "role": "Manajer HR & SDM",
+      "scope": "Cloud VPS",
+      "modules": "Dashboard, HR, Laporan Konsolidasi (SDM)",
+      "status": "HR Manager",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Manajer Keuangan & Akunting",
+      "scope": "Cloud VPS",
+      "modules": "Dashboard, Keuangan, Akunting, Laporan Konsolidasi",
+      "status": "Finance Manager",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "AK": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": false,
+          "approve": true,
+          "export": true
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Manajer Purchasing & Logistik",
+      "scope": "Cloud VPS",
+      "modules": "Dashboard, Purchasing, Inventory, GA",
+      "status": "Supply Chain",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "IN": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "GA": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Admin Outlet",
+      "scope": "Server Lokal Cabang",
+      "modules": "Operasional Cabang, Pengguna Outlet, Pengaturan Lokal",
+      "status": "Branch Admin",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": true,
+          "create": true,
+          "edit": true,
+          "delete": true,
+          "approve": true,
+          "export": true
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Dokter",
+      "scope": "Klinik Utama & Pratama",
+      "modules": "Rawat Jalan (SOAP), Rawat Inap (CPPT/Visite), RME, Lab/Rad",
+      "status": "Clinical Access",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Apoteker",
+      "scope": "Apotek & Farmasi Klinik",
+      "modules": "Pelayanan Farmasi, Stok Obat (FEFO/Narkotika), SATUSEHAT",
+      "status": "Pharmacy Access",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Kasir",
+      "scope": "Klinik & Apotek",
+      "modules": "Tagihan Pasien, Pembayaran, Kwitansi, Tutup Kasir",
+      "status": "Cashier Access",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    },
+    {
+      "role": "Pendaftaran",
+      "scope": "Klinik Utama & Pratama",
+      "modules": "Registrasi Pasien, Verifikasi BPJS, Validasi NIK & IHS",
+      "status": "Frontdesk Access",
+      "matrix": {
+        "DB": {
+          "view": true,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": true
+        },
+        "MO": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "HR": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "KE": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "AK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PU": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IN": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "GA": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "MK": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "IT": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "LP": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        },
+        "PS": {
+          "view": false,
+          "create": false,
+          "edit": false,
+          "delete": false,
+          "approve": false,
+          "export": false
+        }
+      }
+    }
+  ],
+  "schedules": [
+    {
+      "id": "SCH-01",
+      "staffName": "Dr. Andi Wijaya",
+      "role": "Dokter",
+      "outlet": "Klinik Utama",
+      "poli": "Poli Penyakit Dalam",
+      "day": "Senin - Jumat",
+      "shift": "08:00 - 14:00",
+      "quota": 35,
+      "status": "Aktif"
+    },
+    {
+      "id": "SCH-02",
+      "staffName": "Dr. Hendra Kusuma",
+      "role": "Dokter",
+      "outlet": "Klinik Pratama",
+      "poli": "Poli Umum",
+      "day": "Senin - Sabtu",
+      "shift": "08:00 - 15:00",
+      "quota": 45,
+      "status": "Aktif"
+    },
+    {
+      "id": "SCH-03",
+      "staffName": "Sari Lestari",
+      "role": "Apoteker",
+      "outlet": "Apotek",
+      "poli": "Farmasi Klinis",
+      "day": "Senin - Jumat",
+      "shift": "08:00 - 17:00",
+      "quota": 0,
+      "status": "Aktif"
+    },
+    {
+      "id": "SCH-04",
+      "staffName": "drg. Maya Putri",
+      "role": "Dokter Gigi",
+      "outlet": "Klinik Pratama",
+      "poli": "Poli Gigi",
+      "day": "Selasa, Kamis, Sabtu",
+      "shift": "13:00 - 19:00",
+      "quota": 20,
+      "status": "Aktif"
+    }
+  ],
+  "attendanceLogs": [
+    {
+      "id": "ATT-01",
+      "date": "2026-11-27",
+      "staffName": "Dr. Andi Wijaya",
+      "outlet": "Klinik Utama",
+      "checkIn": "07:52",
+      "checkOut": "-",
+      "status": "Hadir"
+    },
+    {
+      "id": "ATT-02",
+      "date": "2026-11-27",
+      "staffName": "Sari Lestari",
+      "outlet": "Apotek",
+      "checkIn": "07:58",
+      "checkOut": "-",
+      "status": "Hadir"
+    },
+    {
+      "id": "ATT-03",
+      "date": "2026-11-27",
+      "staffName": "Rina Putri",
+      "outlet": "Klinik Pratama",
+      "checkIn": "08:14",
+      "checkOut": "-",
+      "status": "Terlambat"
+    },
+    {
+      "id": "ATT-04",
+      "date": "2026-11-27",
+      "staffName": "Dr. Hendra Kusuma",
+      "outlet": "Klinik Pratama",
+      "checkIn": "07:48",
+      "checkOut": "-",
+      "status": "Hadir"
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "LV-01",
+      "staffName": "Rina Putri",
+      "outlet": "Klinik Pratama",
+      "leaveType": "Cuti Tahunan",
+      "dateRange": "2026-12-05 s/d 2026-12-07",
+      "reason": "Keperluan keluarga",
+      "status": "Menunggu Approval"
+    },
+    {
+      "id": "LV-02",
+      "staffName": "Sari Lestari",
+      "outlet": "Apotek",
+      "leaveType": "Seminar SKP",
+      "dateRange": "2026-12-12",
+      "reason": "Simposium Apoteker Nasional",
+      "status": "Disetujui"
+    }
+  ],
+  "medicalCredentials": [
+    {
+      "id": "CRD-01",
+      "staffName": "Dr. Andi Wijaya",
+      "profession": "Dokter Spesialis",
+      "outlet": "Klinik Utama",
+      "strNo": "STR-8821921",
+      "sipNo": "SIP-441/Dinkes-JKT/2024",
+      "expiryDate": "2028-09-15",
+      "ihsId": "IHS-PRAC-90011",
+      "skpPoints": 42,
+      "status": "Aktif"
+    },
+    {
+      "id": "CRD-02",
+      "staffName": "Sari Lestari",
+      "profession": "Apoteker",
+      "outlet": "Apotek",
+      "strNo": "STRA-9912011",
+      "sipNo": "SIPA-112/DPMPTSP-DPK/2025",
+      "expiryDate": "2029-03-20",
+      "ihsId": "IHS-PRAC-90022",
+      "skpPoints": 36,
+      "status": "Aktif"
+    },
+    {
+      "id": "CRD-03",
+      "staffName": "Dr. Hendra Kusuma",
+      "profession": "Dokter Umum",
+      "outlet": "Klinik Pratama",
+      "strNo": "STR-7741209",
+      "sipNo": "SIP-229/Dinkes-BKS/2022",
+      "expiryDate": "2027-01-15",
+      "ihsId": "IHS-PRAC-90033",
+      "skpPoints": 28,
+      "status": "Segera Perpanjang"
+    },
+    {
+      "id": "CRD-04",
+      "staffName": "drg. Maya Putri",
+      "profession": "Dokter Gigi",
+      "outlet": "Klinik Pratama",
+      "strNo": "STRG-6612098",
+      "sipNo": "SIP-108/Dinkes-BKS/2021",
+      "expiryDate": "2026-11-10",
+      "ihsId": "IHS-PRAC-90044",
+      "skpPoints": 18,
+      "status": "Expired"
+    }
+  ],
+  "doctorFeeRules": [
+    {
+      "id": "DFR-01",
+      "serviceCategory": "Konsultasi Dokter Spesialis",
+      "outlet": "Klinik Utama",
+      "sharePercent": 60,
+      "fixedPerVisit": 0,
+      "visiteRate": 150000
+    },
+    {
+      "id": "DFR-02",
+      "serviceCategory": "Konsultasi Dokter Umum / Gigi",
+      "outlet": "Klinik Pratama",
+      "sharePercent": 45,
+      "fixedPerVisit": 25000,
+      "visiteRate": 100000
+    },
+    {
+      "id": "DFR-03",
+      "serviceCategory": "Tindakan Medis & Bedah Minor",
+      "outlet": "Semua Klinik",
+      "sharePercent": 50,
+      "fixedPerVisit": 0,
+      "visiteRate": 0
+    }
+  ],
+  "payrolls": [
+    {
+      "id": "PAY-202611-01",
+      "period": "2026-11",
+      "staffName": "Dr. Andi Wijaya",
+      "outlet": "Klinik Utama",
+      "baseSalary": 12000000,
+      "medicalFee": 14800000,
+      "allowance": 1500000,
+      "taxPph21": 1415000,
+      "netPay": 26885000,
+      "status": "Menunggu Finalisasi"
+    },
+    {
+      "id": "PAY-202611-02",
+      "period": "2026-11",
+      "staffName": "Dr. Hendra Kusuma",
+      "outlet": "Klinik Pratama",
+      "baseSalary": 9000000,
+      "medicalFee": 11400000,
+      "allowance": 1000000,
+      "taxPph21": 920000,
+      "netPay": 20480000,
+      "status": "Menunggu Finalisasi"
+    },
+    {
+      "id": "PAY-202611-03",
+      "period": "2026-11",
+      "staffName": "Sari Lestari",
+      "outlet": "Apotek",
+      "baseSalary": 7500000,
+      "medicalFee": 1850000,
+      "allowance": 850000,
+      "taxPph21": 310000,
+      "netPay": 9890000,
+      "status": "Menunggu Finalisasi"
+    },
+    {
+      "id": "PAY-202611-04",
+      "period": "2026-11",
+      "staffName": "Rina Putri",
+      "outlet": "Klinik Pratama",
+      "baseSalary": 4800000,
+      "medicalFee": 0,
+      "allowance": 500000,
+      "taxPph21": 85000,
+      "netPay": 5215000,
+      "status": "Menunggu Finalisasi"
+    }
+  ],
+  "jobRequisitions": [
+    {
+      "id": "JOB-01",
+      "title": "Perawat Pelaksana IGD & Rawat Inap",
+      "outlet": "Klinik Utama",
+      "headcount": 2,
+      "urgency": "Tinggi",
+      "applicantsCount": 4,
+      "status": "Terbuka"
+    },
+    {
+      "id": "JOB-02",
+      "title": "Tenaga Teknis Kefarmasian (TTK)",
+      "outlet": "Apotek",
+      "headcount": 1,
+      "urgency": "Sedang",
+      "applicantsCount": 3,
+      "status": "Terbuka"
+    }
+  ],
+  "applicants": [
+    {
+      "id": "APL-01",
+      "jobId": "JOB-01",
+      "name": "Nadia Kusuma, S.Kep., Ns.",
+      "phone": "0812-3400-1122",
+      "outlet": "Klinik Utama",
+      "stage": "Wawancara",
+      "score": 88,
+      "appliedDate": "2026-11-20"
+    },
+    {
+      "id": "APL-02",
+      "jobId": "JOB-01",
+      "name": "Bagus Pratama, A.Md.Kep.",
+      "phone": "0813-4500-2211",
+      "outlet": "Klinik Utama",
+      "stage": "Screening",
+      "score": 80,
+      "appliedDate": "2026-11-24"
+    },
+    {
+      "id": "APL-03",
+      "jobId": "JOB-02",
+      "name": "Lina Marlina, A.Md.Farm.",
+      "phone": "0857-9900-8811",
+      "outlet": "Apotek",
+      "stage": "Tes Praktik",
+      "score": 91,
+      "appliedDate": "2026-11-18"
+    }
+  ],
+  "performanceReviews": [
+    {
+      "id": "KPI-01",
+      "period": "Q4 2026",
+      "staffName": "Sari Lestari",
+      "outlet": "Apotek",
+      "kpiScore": 94,
+      "attendanceScore": 98,
+      "patientFeedback": 4.9,
+      "status": "Selesai"
+    },
+    {
+      "id": "KPI-02",
+      "period": "Q4 2026",
+      "staffName": "Dr. Andi Wijaya",
+      "outlet": "Klinik Utama",
+      "kpiScore": 92,
+      "attendanceScore": 96,
+      "patientFeedback": 4.8,
+      "status": "Selesai"
+    },
+    {
+      "id": "KPI-03",
+      "period": "Q4 2026",
+      "staffName": "Rina Putri",
+      "outlet": "Klinik Pratama",
+      "kpiScore": 84,
+      "attendanceScore": 88,
+      "patientFeedback": 4.5,
+      "status": "Review Atasan"
+    }
+  ],
+  "cashBankAccounts": [
+    {
+      "id": "ACC-HQ-BCA",
+      "name": "Bank BCA Giro Pusat",
+      "type": "Bank",
+      "outlet": "Pusat (Cloud VPS)",
+      "accountNo": "521-0098-112",
+      "balanceRp": 315000000
+    },
+    {
+      "id": "ACC-KU-KAS",
+      "name": "Kas Operasional Klinik Utama",
+      "type": "Kas Tunai",
+      "outlet": "Klinik Utama",
+      "accountNo": "KAS-KU-01",
+      "balanceRp": 42500000
+    },
+    {
+      "id": "ACC-KP-KAS",
+      "name": "Kas Operasional Klinik Pratama",
+      "type": "Kas Tunai",
+      "outlet": "Klinik Pratama",
+      "accountNo": "KAS-KP-01",
+      "balanceRp": 29800000
+    },
+    {
+      "id": "ACC-AP-KAS",
+      "name": "Kas & QRIS Apotek",
+      "type": "EDC / QRIS",
+      "outlet": "Apotek",
+      "accountNo": "QRIS-AP-01",
+      "balanceRp": 37700000
+    }
+  ],
+  "cashTransactions": [
+    {
+      "id": "TRX-01",
+      "date": "2026-11-27 08:45",
+      "type": "Penerimaan",
+      "accountId": "ACC-KU-KAS",
+      "outlet": "Klinik Utama",
+      "category": "Pendapatan Kasir",
+      "method": "QRIS / Tunai",
+      "description": "Setoran Kasir Pagi Klinik Utama",
+      "amountRp": 38200000,
+      "status": "Terverifikasi"
+    },
+    {
+      "id": "TRX-02",
+      "date": "2026-11-27 08:50",
+      "type": "Penerimaan",
+      "accountId": "ACC-AP-KAS",
+      "outlet": "Apotek",
+      "category": "Penjualan Farmasi",
+      "method": "EDC / QRIS",
+      "description": "Penjualan Resep & OTC Apotek",
+      "amountRp": 21700000,
+      "status": "Terverifikasi"
+    },
+    {
+      "id": "TRX-03",
+      "date": "2026-11-26 15:20",
+      "type": "Pengeluaran",
+      "accountId": "ACC-HQ-BCA",
+      "outlet": "Pusat (Cloud VPS)",
+      "category": "Operasional Listrik & Internet",
+      "method": "Transfer Bank",
+      "description": "Pembayaran PLN & Fiber Dedicated 3 Cabang",
+      "amountRp": 8450000,
+      "status": "Dibayar"
+    },
+    {
+      "id": "TRX-04",
+      "date": "2026-11-27 09:10",
+      "type": "Pengeluaran",
+      "accountId": "ACC-HQ-BCA",
+      "outlet": "Klinik Utama",
+      "category": "Kalibrasi & Pemeliharaan",
+      "method": "Transfer Bank",
+      "description": "Pengajuan Biaya Kalibrasi USG & Lab",
+      "amountRp": 4200000,
+      "status": "Menunggu Approval"
+    }
+  ],
+  "supplierPayables": [
+    {
+      "id": "AP-01",
+      "invoiceNo": "FAK-KF-9921",
+      "supplier": "PT Kimia Farma Trading",
+      "grnNo": "GRN-2026-041",
+      "dueDate": "2026-12-10",
+      "totalRp": 14500000,
+      "paidRp": 0,
+      "agingBucket": "0-30 Hari",
+      "status": "Belum Lunas"
+    },
+    {
+      "id": "AP-02",
+      "invoiceNo": "FAK-ENS-4410",
+      "supplier": "PT Enseval Putera Megatrading",
+      "grnNo": "GRN-2026-039",
+      "dueDate": "2026-11-29",
+      "totalRp": 22800000,
+      "paidRp": 10000000,
+      "agingBucket": "31-60 Hari",
+      "status": "Cicilan / Sebagian"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "BDG-01",
+      "period": "2026-11",
+      "outlet": "Klinik Utama",
+      "accountCode": "6101 - Beban Operasional & Utilitas",
+      "budgetRp": 35000000,
+      "actualRp": 24200000
+    },
+    {
+      "id": "BDG-02",
+      "period": "2026-11",
+      "outlet": "Klinik Pratama",
+      "accountCode": "5101 - Beban HPP Obat & Jasa Medis",
+      "budgetRp": 45000000,
+      "actualRp": 41800000
+    },
+    {
+      "id": "BDG-03",
+      "period": "2026-11",
+      "outlet": "Apotek",
+      "accountCode": "1301 - Pengadaan Stok Obat KFA",
+      "budgetRp": 60000000,
+      "actualRp": 58900000
+    }
+  ],
+  "depositReconciliations": [
+    {
+      "id": "REC-01",
+      "date": "2026-11-26",
+      "outlet": "Klinik Utama",
+      "shift": "Shift Pagi & Sore",
+      "localCashRp": 14200000,
+      "localDigitalRp": 24000000,
+      "bankMutationRp": 38200000,
+      "varianceRp": 0,
+      "status": "Sesuai"
+    },
+    {
+      "id": "REC-02",
+      "date": "2026-11-26",
+      "outlet": "Apotek",
+      "shift": "Full Day",
+      "localCashRp": 7500000,
+      "localDigitalRp": 14200000,
+      "bankMutationRp": 21550000,
+      "varianceRp": -150000,
+      "status": "Ada Selisih"
+    },
+    {
+      "id": "REC-03",
+      "date": "2026-11-27",
+      "outlet": "Klinik Pratama",
+      "shift": "Shift Pagi",
+      "localCashRp": 11500000,
+      "localDigitalRp": 15000000,
+      "bankMutationRp": 0,
+      "varianceRp": -26500000,
+      "status": "Belum Cocok"
+    }
+  ],
+  "chartOfAccounts": [
+    {
+      "code": "1000",
+      "name": "ASET",
+      "category": "Aset",
+      "parentCode": "",
+      "normalBalance": "Debit",
+      "balanceAmount": 933650000,
+      "balance": "Rp 933.650.000"
+    },
+    {
+      "code": "1101",
+      "name": "Kas & Bank Operasional Cabang",
+      "category": "Aset Lancar",
+      "parentCode": "1000",
+      "normalBalance": "Debit",
+      "balanceAmount": 425000000,
+      "balance": "Rp 425.000.000"
+    },
+    {
+      "code": "1102",
+      "name": "Piutang Klaim BPJS Kesehatan (VClaim/P-Care/PRB)",
+      "category": "Aset Lancar",
+      "parentCode": "1000",
+      "normalBalance": "Debit",
+      "balanceAmount": 198400000,
+      "balance": "Rp 198.400.000"
+    },
+    {
+      "code": "1301",
+      "name": "Persediaan Obat & Alkes (KFA)",
+      "category": "Aset Lancar",
+      "parentCode": "1000",
+      "normalBalance": "Debit",
+      "balanceAmount": 310250000,
+      "balance": "Rp 310.250.000"
+    },
+    {
+      "code": "1501",
+      "name": "Aset Tetap Alat Medis & Inventaris",
+      "category": "Aset Tetap",
+      "parentCode": "1000",
+      "normalBalance": "Debit",
+      "balanceAmount": 845000000,
+      "balance": "Rp 845.000.000"
+    },
+    {
+      "code": "1509",
+      "name": "Akumulasi Penyusutan Aset Tetap",
+      "category": "Aset Tetap",
+      "parentCode": "1000",
+      "normalBalance": "Kredit",
+      "balanceAmount": 120000000,
+      "balance": "Rp 120.000.000"
+    },
+    {
+      "code": "2101",
+      "name": "Hutang Dagang Supplier Farmasi",
+      "category": "Kewajiban",
+      "parentCode": "",
+      "normalBalance": "Kredit",
+      "balanceAmount": 115800000,
+      "balance": "Rp 115.800.000"
+    },
+    {
+      "code": "2201",
+      "name": "Hutang Pajak (PPN / PPh 21 / PPh 23)",
+      "category": "Kewajiban",
+      "parentCode": "",
+      "normalBalance": "Kredit",
+      "balanceAmount": 14200000,
+      "balance": "Rp 14.200.000"
+    },
+    {
+      "code": "3101",
+      "name": "Modal Disetor & Laba Ditahan",
+      "category": "Ekuitas",
+      "parentCode": "",
+      "normalBalance": "Kredit",
+      "balanceAmount": 1475000000,
+      "balance": "Rp 1.475.000.000"
+    },
+    {
+      "code": "4101",
+      "name": "Pendapatan Layanan Medis Rawat Jalan & Inap",
+      "category": "Pendapatan",
+      "parentCode": "",
+      "normalBalance": "Kredit",
+      "balanceAmount": 64700000,
+      "balance": "Rp 64.700.000"
+    },
+    {
+      "code": "4102",
+      "name": "Pendapatan Farmasi & Penjualan Apotek (OTC)",
+      "category": "Pendapatan",
+      "parentCode": "",
+      "normalBalance": "Kredit",
+      "balanceAmount": 21700000,
+      "balance": "Rp 21.700.000"
+    },
+    {
+      "code": "5101",
+      "name": "Beban HPP Obat & Jasa Medis Dokter",
+      "category": "Beban Pokok",
+      "parentCode": "",
+      "normalBalance": "Debit",
+      "balanceAmount": 34100000,
+      "balance": "Rp 34.100.000"
+    },
+    {
+      "code": "6101",
+      "name": "Beban Operasional, Utilitas & Penyusutan",
+      "category": "Beban Operasional",
+      "parentCode": "",
+      "normalBalance": "Debit",
+      "balanceAmount": 18450000,
+      "balance": "Rp 18.450.000"
+    }
+  ],
+  "fixedAssets": [
+    {
+      "code": "AST-MED-01",
+      "name": "USG 4D Mindray DC-60",
+      "outlet": "Klinik Utama",
+      "purchaseDate": "2024-03-10",
+      "costRp": 420000000,
+      "usefulLifeMonths": 60,
+      "accumulatedDepRp": 112000000,
+      "bookValueRp": 308000000,
+      "monthlyDepRp": 7000000
+    },
+    {
+      "code": "AST-MED-02",
+      "name": "Hematology Analyzer Sysmex",
+      "outlet": "Klinik Pratama",
+      "purchaseDate": "2025-01-15",
+      "costRp": 280000000,
+      "usefulLifeMonths": 60,
+      "accumulatedDepRp": 51333333,
+      "bookValueRp": 228666667,
+      "monthlyDepRp": 4666667
+    },
+    {
+      "code": "AST-FAR-03",
+      "name": "Chiller Vaksin & Insulin 2-8°C",
+      "outlet": "Apotek",
+      "purchaseDate": "2025-06-01",
+      "costRp": 65000000,
+      "usefulLifeMonths": 48,
+      "accumulatedDepRp": 16250000,
+      "bookValueRp": 48750000,
+      "monthlyDepRp": 1354167
+    }
+  ],
+  "depreciationRuns": [
+    {
+      "id": "DEP-2026-10",
+      "period": "2026-10",
+      "totalAmountRp": 13020834,
+      "journalCode": "JRN-DEP-202610",
+      "status": "Diposting"
+    }
+  ],
+  "taxRecords": [
+    {
+      "id": "TAX-01",
+      "period": "2026-11",
+      "taxType": "PPN Masukan/Keluaran (OTC)",
+      "baseAmountRp": 84000000,
+      "taxAmountRp": 9240000,
+      "status": "Siap Lapor"
+    },
+    {
+      "id": "TAX-02",
+      "period": "2026-11",
+      "taxType": "PPh 21 (Dokter & Karyawan)",
+      "baseAmountRp": 54700000,
+      "taxAmountRp": 2730000,
+      "status": "Menunggu Payroll Final"
+    },
+    {
+      "id": "TAX-03",
+      "period": "2026-11",
+      "taxType": "PPh 23 (Vendor Kalibrasi & Limbah B3)",
+      "baseAmountRp": 18500000,
+      "taxAmountRp": 370000,
+      "status": "Sudah Setor"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-01",
+      "name": "PT Kimia Farma Trading",
+      "npwp": "01.001.620.8-051.000",
+      "pbfLicense": "PBF-0091-JKT",
+      "pic": "Hendra Wijaya",
+      "phone": "021-4609911",
+      "email": "order@kimiafarma.co.id",
+      "paymentTerms": "TOP 30",
+      "status": "Aktif"
+    },
+    {
+      "id": "SUP-02",
+      "name": "PT Enseval Putera Megatrading",
+      "npwp": "01.302.114.2-054.000",
+      "pbfLicense": "PBF-0118-JKT",
+      "pic": "Ratna Sari",
+      "phone": "021-46822422",
+      "email": "sales@enseval.com",
+      "paymentTerms": "TOP 30",
+      "status": "Aktif"
+    },
+    {
+      "id": "SUP-03",
+      "name": "PT Anugrah Argon Medica",
+      "npwp": "01.771.209.4-052.000",
+      "pbfLicense": "PBF-0442-BKS",
+      "pic": "Dimas Putra",
+      "phone": "021-7452100",
+      "email": "cs@anugrahargon.com",
+      "paymentTerms": "TOP 45",
+      "status": "Aktif"
+    }
+  ],
+  "purchaseRequests": [
+    {
+      "id": "PR-2026-014",
+      "date": "2026-11-27",
+      "requestedBy": "Gudang Pusat",
+      "itemCode": "KFA-93005",
+      "itemName": "Infus RL 500ml",
+      "qty": 500,
+      "reason": "Buffer stok menipis untuk pengiriman Klinik Utama",
+      "status": "Menunggu Approval"
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "poNumber": "PO-2026-081",
+      "orderDate": "2026-11-24",
+      "supplierId": "SUP-01",
+      "supplier": "PT Kimia Farma Trading",
+      "items": "Amoxicillin 500mg, Paracetamol 500mg",
+      "totalRp": 14500000,
+      "total": "Rp 14.500.000",
+      "target": "Gudang Pusat",
+      "status": "Disetujui",
+      "lines": [
+        {
+          "code": "KFA-93001",
+          "name": "Amoxicillin 500mg Kaplet",
+          "qty": 5000,
+          "priceRp": 1300
+        },
+        {
+          "code": "KFA-93002",
+          "name": "Paracetamol 500mg Tablet",
+          "qty": 10000,
+          "priceRp": 800
+        }
+      ]
+    },
+    {
+      "poNumber": "PO-2026-082",
+      "orderDate": "2026-11-25",
+      "supplierId": "SUP-02",
+      "supplier": "PT Enseval Putera Megatrading",
+      "items": "Infus RL 500ml, Cefixime 100mg",
+      "totalRp": 22800000,
+      "total": "Rp 22.800.000",
+      "target": "Gudang Pusat",
+      "status": "Dikirim",
+      "lines": [
+        {
+          "code": "KFA-93005",
+          "name": "Infus RL 500ml",
+          "qty": 800,
+          "priceRp": 16500
+        },
+        {
+          "code": "KFA-93003",
+          "name": "Cefixime 100mg Kapsul",
+          "qty": 2400,
+          "priceRp": 4000
+        }
+      ]
+    },
+    {
+      "poNumber": "PO-2026-083",
+      "orderDate": "2026-11-26",
+      "supplierId": "SUP-03",
+      "supplier": "PT Anugrah Argon Medica",
+      "items": "Omeprazole 20mg Kapsul",
+      "totalRp": 9400000,
+      "total": "Rp 9.400.000",
+      "target": "Klinik Pratama",
+      "status": "Menunggu Approval",
+      "lines": [
+        {
+          "code": "KFA-93004",
+          "name": "Omeprazole 20mg Kapsul",
+          "qty": 4700,
+          "priceRp": 2000
+        }
+      ]
+    }
+  ],
+  "goodsReceipts": [
+    {
+      "grnNo": "GRN-2026-041",
+      "poNumber": "PO-2026-081",
+      "supplier": "PT Kimia Farma Trading",
+      "invoiceNo": "FAK-KF-9921",
+      "receivedDate": "2026-11-26",
+      "dueDate": "2026-12-26",
+      "totalRp": 14500000,
+      "items": [
+        {
+          "code": "KFA-93001",
+          "name": "Amoxicillin 500mg Kaplet",
+          "qty": 2000,
+          "batchNo": "BATCH-AMX-26A",
+          "expiredDate": "2028-05-01"
+        }
+      ],
+      "status": "Selesai"
+    }
+  ],
+  "purchaseReturns": [
+    {
+      "id": "RET-PO-01",
+      "date": "2026-11-22",
+      "supplier": "PT Enseval Putera Megatrading",
+      "grnNo": "GRN-2026-035",
+      "itemCode": "KFA-93003",
+      "itemName": "Cefixime 100mg Kapsul",
+      "batchNo": "BATCH-CFX-24Z",
+      "qty": 50,
+      "reason": "Kemasan blister penyok saat diterima",
+      "resolution": "Potong Hutang (Credit Note)",
+      "status": "Disetujui Supplier"
+    }
+  ],
+  "inventoryBatches": [
+    {
+      "id": "B-47554",
+      "code": "KFA-93005",
+      "name": "Infus RL 500ml",
+      "location": "Klinik Utama",
+      "batchNo": "IRL-2512X",
+      "expiredDate": "2026-12-25",
+      "qty": 100,
+      "rack": "RAK-A1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-46331",
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "location": "Apotek",
+      "batchNo": "CFX-2512K",
+      "expiredDate": "2027-09-20",
+      "qty": 200,
+      "rack": "RAK-A1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-01",
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "location": "Gudang Pusat",
+      "batchNo": "AMX-2601A",
+      "expiredDate": "2028-05-01",
+      "qty": 4500,
+      "rack": "RAK-A1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-02",
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "location": "Klinik Utama",
+      "batchNo": "AMX-2510B",
+      "expiredDate": "2027-04-12",
+      "qty": 620,
+      "rack": "FAR-U1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-03",
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "location": "Apotek",
+      "batchNo": "AMX-2511C",
+      "expiredDate": "2027-07-19",
+      "qty": 880,
+      "rack": "APT-B2",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-04",
+      "code": "KFA-93002",
+      "name": "Paracetamol 500mg Tablet",
+      "location": "Gudang Pusat",
+      "batchNo": "PCM-2603A",
+      "expiredDate": "2028-11-15",
+      "qty": 8200,
+      "rack": "RAK-A2",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-05",
+      "code": "KFA-93002",
+      "name": "Paracetamol 500mg Tablet",
+      "location": "Klinik Pratama",
+      "batchNo": "PCM-2508D",
+      "expiredDate": "2027-02-20",
+      "qty": 450,
+      "rack": "PRT-A1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-06",
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "location": "Gudang Pusat",
+      "batchNo": "CFX-2512K",
+      "expiredDate": "2027-09-20",
+      "qty": 1600,
+      "rack": "RAK-B1",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-07",
+      "code": "KFA-93005",
+      "name": "Infus RL 500ml",
+      "location": "Gudang Pusat",
+      "batchNo": "IRL-2512X",
+      "expiredDate": "2026-12-25",
+      "qty": 850,
+      "rack": "RAK-C4",
+      "status": "Tersedia"
+    },
+    {
+      "id": "B-08",
+      "code": "KFA-93009",
+      "name": "Codeine 10mg Tablet",
+      "location": "Gudang Pusat",
+      "batchNo": "CDN-2504N",
+      "expiredDate": "2027-01-18",
+      "qty": 320,
+      "rack": "LEMARI-NARKO",
+      "status": "Tersedia"
+    }
+  ],
+  "stockMutations": [
+    {
+      "id": "MUT-7555",
+      "date": "2026-11-27 07:45",
+      "fromLocation": "Gudang Pusat",
+      "toLocation": "Klinik Utama",
+      "itemCode": "KFA-93005",
+      "itemName": "Infus RL 500ml",
+      "batchNo": "IRL-2512X",
+      "qty": 100,
+      "status": "Dikirim ke Cabang"
+    },
+    {
+      "id": "MUT-6331",
+      "date": "2026-11-27 07:45",
+      "fromLocation": "Gudang Pusat",
+      "toLocation": "Apotek",
+      "itemCode": "KFA-93003",
+      "itemName": "Cefixime 100mg Kapsul",
+      "batchNo": "CFX-2512K",
+      "qty": 200,
+      "status": "Dikirim ke Cabang"
+    },
+    {
+      "id": "MUT-001",
+      "date": "2026-11-26 14:15",
+      "fromLocation": "Gudang Pusat",
+      "toLocation": "Apotek",
+      "itemCode": "KFA-93001",
+      "itemName": "Amoxicillin 500mg Kaplet",
+      "batchNo": "AMX-2511C",
+      "qty": 500,
+      "status": "Diterima Cabang"
+    }
+  ],
+  "stockOpnames": [
+    {
+      "id": "OPN-01",
+      "date": "2026-11-26",
+      "location": "Gudang Pusat",
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "systemQty": 1805,
+      "physicalQty": 1800,
+      "difference": -5,
+      "reason": "Kemasan blister rusak saat sampling QA",
+      "status": "Menunggu Approval"
+    }
+  ],
+  "stockCardMovements": [
+    {
+      "id": "SCM-47554",
+      "date": "2026-11-27 07:45",
+      "code": "KFA-93005",
+      "name": "Infus RL 500ml",
+      "location": "Klinik Utama",
+      "batchNo": "IRL-2512X",
+      "refType": "Mutasi Masuk",
+      "refNo": "REQ-CAB-02",
+      "qtyIn": 100,
+      "qtyOut": 0,
+      "balanceAfter": 100
+    },
+    {
+      "id": "SCM-47554",
+      "date": "2026-11-27 07:45",
+      "code": "KFA-93005",
+      "name": "Infus RL 500ml",
+      "location": "Gudang Pusat",
+      "batchNo": "IRL-2512X",
+      "refType": "Mutasi Keluar",
+      "refNo": "REQ-CAB-02",
+      "qtyIn": 0,
+      "qtyOut": 100,
+      "balanceAfter": 850
+    },
+    {
+      "id": "SCM-46331",
+      "date": "2026-11-27 07:45",
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "location": "Apotek",
+      "batchNo": "CFX-2512K",
+      "refType": "Mutasi Masuk",
+      "refNo": "REQ-CAB-01",
+      "qtyIn": 200,
+      "qtyOut": 0,
+      "balanceAfter": 200
+    },
+    {
+      "id": "SCM-46331",
+      "date": "2026-11-27 07:45",
+      "code": "KFA-93003",
+      "name": "Cefixime 100mg Kapsul",
+      "location": "Gudang Pusat",
+      "batchNo": "CFX-2512K",
+      "refType": "Mutasi Keluar",
+      "refNo": "REQ-CAB-01",
+      "qtyIn": 0,
+      "qtyOut": 200,
+      "balanceAfter": 1600
+    },
+    {
+      "id": "SCM-01",
+      "date": "2026-11-26 10:00",
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "location": "Gudang Pusat",
+      "batchNo": "AMX-2601A",
+      "refType": "GRN",
+      "refNo": "GRN-2026-041",
+      "qtyIn": 2000,
+      "qtyOut": 0,
+      "balanceAfter": 4500
+    },
+    {
+      "id": "SCM-02",
+      "date": "2026-11-26 14:15",
+      "code": "KFA-93001",
+      "name": "Amoxicillin 500mg Kaplet",
+      "location": "Gudang Pusat",
+      "batchNo": "AMX-2511C",
+      "refType": "Mutasi Keluar",
+      "refNo": "MUT-001",
+      "qtyIn": 0,
+      "qtyOut": 500,
+      "balanceAfter": 4000
+    }
+  ],
+  "gaAssets": [
+    {
+      "code": "AST-MED-01",
+      "name": "USG 4D Mindray DC-60",
+      "category": "Alat Medis",
+      "outlet": "Klinik Utama",
+      "serialNo": "SN-MND-88120",
+      "purchaseDate": "2024-03-10",
+      "costRp": 420000000,
+      "calibrationDate": "2027-03-15",
+      "condition": "Baik & Terkalibrasi"
+    },
+    {
+      "code": "AST-MED-02",
+      "name": "Hematology Analyzer Sysmex",
+      "category": "Alat Lab",
+      "outlet": "Klinik Pratama",
+      "serialNo": "SN-SYM-44910",
+      "purchaseDate": "2025-01-15",
+      "costRp": 280000000,
+      "calibrationDate": "2027-01-20",
+      "condition": "Baik & Terkalibrasi"
+    },
+    {
+      "code": "AST-FAR-03",
+      "name": "Chiller Vaksin & Insulin 2-8°C",
+      "category": "Cold Chain",
+      "outlet": "Apotek",
+      "serialNo": "SN-CHL-11920",
+      "purchaseDate": "2025-06-01",
+      "costRp": 65000000,
+      "calibrationDate": "2026-12-10",
+      "condition": "Jadwal Kalibrasi Bulan Depan"
+    }
+  ],
+  "gaMaintenances": [
+    {
+      "id": "MNT-01",
+      "assetCode": "AST-FAR-03",
+      "assetName": "Chiller Vaksin & Insulin 2-8°C",
+      "outlet": "Apotek",
+      "type": "Kalibrasi BPFK",
+      "scheduledDate": "2026-12-10",
+      "vendor": "PT Kalibrasi Medika Nusantara",
+      "costRp": 2500000,
+      "certificateNo": "-",
+      "status": "Terjadwal"
+    },
+    {
+      "id": "MNT-02",
+      "assetCode": "AST-MED-01",
+      "assetName": "USG 4D Mindray DC-60",
+      "outlet": "Klinik Utama",
+      "type": "Preventive Maintenance",
+      "scheduledDate": "2026-11-18",
+      "vendor": "PT Mindray Medical Indonesia",
+      "costRp": 1800000,
+      "certificateNo": "CERT-KAL-2026-91",
+      "status": "Selesai"
+    }
+  ],
+  "outletPermits": [
+    {
+      "id": "PRM-01",
+      "outlet": "Klinik Utama",
+      "permitName": "Izin Operasional Klinik Utama (OSS-RBA)",
+      "permitNo": "912000112233-IOK",
+      "issuer": "DPMPTSP DKI Jakarta",
+      "expiryDate": "2029-05-20",
+      "status": "Aktif"
+    },
+    {
+      "id": "PRM-02",
+      "outlet": "Apotek",
+      "permitName": "Surat Izin Apotek (SIA)",
+      "permitNo": "SIA-449/DPK/2024",
+      "issuer": "Dinkes Kota Depok",
+      "expiryDate": "2027-01-10",
+      "status": "Segera Perpanjang"
+    },
+    {
+      "id": "PRM-03",
+      "outlet": "Klinik Pratama",
+      "permitName": "MoU Pengolahan Limbah Medis B3",
+      "permitNo": "MOU-B3-2026-08",
+      "issuer": "PT Jasa Medivest",
+      "expiryDate": "2027-08-30",
+      "status": "Aktif"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "VEH-01",
+      "plateNo": "B 1924 KLP",
+      "model": "Toyota HiAce Ambulans VIP",
+      "outlet": "Klinik Utama",
+      "stnkExpiry": "2027-04-12",
+      "kirExpiry": "2027-02-18",
+      "odometerKm": 28450,
+      "lastService": "2026-11-01",
+      "status": "Siap Operasional"
+    },
+    {
+      "id": "VEH-02",
+      "plateNo": "B 4412 TXA",
+      "model": "Honda Beat Kurir Antar Obat",
+      "outlet": "Apotek",
+      "stnkExpiry": "2027-09-05",
+      "kirExpiry": "-",
+      "odometerKm": 11200,
+      "lastService": "2026-11-12",
+      "status": "Siap Operasional"
+    }
+  ],
+  "serviceVendors": [
+    {
+      "id": "VND-01",
+      "name": "PT Jasa Medivest",
+      "serviceType": "Pengolahan Limbah Medis B3",
+      "pic": "Bpk. Rudi",
+      "phone": "021-8891220",
+      "contractEnd": "2027-08-30",
+      "sla": "Pickup 2x / minggu",
+      "status": "Aktif"
+    },
+    {
+      "id": "VND-02",
+      "name": "PT Kalibrasi Medika Nusantara",
+      "serviceType": "Kalibrasi Alkes Terakreditasi KAN",
+      "pic": "Ibu Anita",
+      "phone": "021-7781900",
+      "contractEnd": "2027-12-31",
+      "sla": "Respon <= 48 Jam",
+      "status": "Aktif"
+    }
+  ],
+  "consolidatedPatients": [
+    {
+      "rm": "RM-001290",
+      "name": "Ahmad Fauzi",
+      "nik": "3171041205880002",
+      "homeOutlet": "Klinik Utama",
+      "lastVisit": "2026-11-27 (Rawat Jalan)",
+      "jaminan": "BPJS Kesehatan",
+      "ihs": "IHS-100029812",
+      "phone": "0812-7788-9901",
+      "timeline": [
+        {
+          "date": "2026-11-27",
+          "outlet": "Klinik Utama",
+          "activity": "Poli Penyakit Dalam — Dr. Andi Wijaya (J06.9)"
+        },
+        {
+          "date": "2026-11-27",
+          "outlet": "Apotek",
+          "activity": "Penyerahan Resep PRB & Antibiotik"
+        },
+        {
+          "date": "2026-10-14",
+          "outlet": "Klinik Pratama",
+          "activity": "Cek Tekanan Darah & Laboratorium"
+        }
+      ]
+    },
+    {
+      "rm": "RM-001291",
+      "name": "Siti Aminah",
+      "nik": "3275024508920005",
+      "homeOutlet": "Klinik Pratama",
+      "lastVisit": "2026-11-27 (Rawat Jalan)",
+      "jaminan": "BPJS Kesehatan",
+      "ihs": "IHS-100029844",
+      "phone": "0813-6655-4433",
+      "timeline": [
+        {
+          "date": "2026-11-27",
+          "outlet": "Klinik Pratama",
+          "activity": "Poli Umum — Dr. Hendra Kusuma (J06.9 ISPA)"
+        }
+      ]
+    },
+    {
+      "rm": "RM-001292",
+      "name": "Hendra Wijaya",
+      "nik": "3671011911790001",
+      "homeOutlet": "Apotek",
+      "lastVisit": "2026-11-27 (Tebus Resep)",
+      "jaminan": "Umum / Mandiri",
+      "ihs": "IHS-100029901",
+      "phone": "0856-9988-7766",
+      "timeline": [
+        {
+          "date": "2026-11-27",
+          "outlet": "Apotek",
+          "activity": "Pembelian OTC & Vitamin (INV-APT-301)"
+        }
+      ]
+    }
+  ],
+  "promosPackages": [
+    {
+      "id": "PRM-PKG-01",
+      "code": "MCU-SEHAT-26",
+      "name": "Paket Medical Check-Up Lengkap",
+      "type": "Paket Layanan",
+      "discountType": "Nominal",
+      "discountValue": 150000,
+      "finalPriceRp": 499000,
+      "outlets": [
+        "Klinik Utama",
+        "Klinik Pratama"
+      ],
+      "validUntil": "2026-12-31",
+      "quotaUsed": 42,
+      "quotaMax": 200,
+      "status": "Aktif"
+    },
+    {
+      "id": "PRM-PKG-02",
+      "code": "APOTEK10",
+      "name": "Diskon 10% Vitamin & Suplemen",
+      "type": "Voucher Promo",
+      "discountType": "Persen",
+      "discountValue": 10,
+      "finalPriceRp": 0,
+      "outlets": [
+        "Apotek"
+      ],
+      "validUntil": "2026-12-15",
+      "quotaUsed": 88,
+      "quotaMax": 500,
+      "status": "Aktif"
+    }
+  ],
+  "loyaltyRules": {
+    "earnPerRp": 10000,
+    "pointValueRp": 100,
+    "silverMin": 0,
+    "goldMin": 500,
+    "platinumMin": 2000
+  },
+  "loyaltyAccounts": [
+    {
+      "id": "LOY-01",
+      "rm": "RM-001290",
+      "patientName": "Ahmad Fauzi",
+      "tier": "Gold",
+      "points": 840,
+      "totalSpendRp": 8400000,
+      "lastActivity": "2026-11-27"
+    },
+    {
+      "id": "LOY-02",
+      "rm": "RM-001292",
+      "patientName": "Hendra Wijaya",
+      "tier": "Silver",
+      "points": 320,
+      "totalSpendRp": 3200000,
+      "lastActivity": "2026-11-27"
+    }
+  ],
+  "broadcastCampaigns": [
+    {
+      "id": "BRD-01",
+      "title": "Pengingat Kontrol Prolanis & PRB Desember",
+      "channel": "WhatsApp",
+      "segment": "Pasien Kronis BPJS",
+      "targetCount": 184,
+      "sentCount": 184,
+      "readRate": "82%",
+      "scheduledAt": "2026-11-27 09:00",
+      "template": "Halo {nama}, waktunya kontrol rutin bulan ini di {outlet}.",
+      "status": "Terkirim"
+    }
+  ],
+  "satisfactionSurveys": [
+    {
+      "id": "SRV-01",
+      "date": "2026-11-27",
+      "outlet": "Klinik Utama",
+      "poliDoctor": "Poli Penyakit Dalam · Dr. Andi",
+      "patientName": "Ahmad Fauzi",
+      "rating": 5,
+      "nps": 10,
+      "comment": "Pelayanan cepat, resep langsung siap di apotek.",
+      "followUpStatus": "Selesai"
+    },
+    {
+      "id": "SRV-02",
+      "date": "2026-11-26",
+      "outlet": "Klinik Pratama",
+      "poliDoctor": "Pendaftaran / Poli Umum",
+      "patientName": "Siti Aminah",
+      "rating": 3,
+      "nps": 7,
+      "comment": "Antrean verifikasi BPJS agak lama saat jaringan melambat.",
+      "followUpStatus": "Belum Ditindaklanjuti"
+    }
+  ],
+  "fhirLogs": [
+    {
+      "id": "FHIR-901",
+      "timestamp": "2026-11-27 08:50:11",
+      "outlet": "Klinik Utama",
+      "resourceType": "Encounter",
+      "patientLabel": "Ahmad Fauzi (IHS-100029812)",
+      "httpStatus": 200,
+      "status": "Terkirim",
+      "payloadJson": {
+        "resourceType": "Encounter",
+        "status": "finished",
+        "class": {
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "subject": {
+          "reference": "Patient/100029812",
+          "display": "Ahmad Fauzi"
+        },
+        "serviceProvider": {
+          "reference": "Organization/10002819"
+        }
+      },
+      "responseMessage": "OK · FHIR ID: enc-ku-992101"
+    },
+    {
+      "id": "FHIR-902",
+      "timestamp": "2026-11-27 08:51:02",
+      "outlet": "Apotek",
+      "resourceType": "MedicationDispense",
+      "patientLabel": "Ahmad Fauzi (IHS-100029812)",
+      "httpStatus": 200,
+      "status": "Terkirim",
+      "payloadJson": {
+        "resourceType": "MedicationDispense",
+        "status": "completed",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://sys-ids.kemkes.go.id/kfa",
+              "code": "93001",
+              "display": "Amoxicillin 500mg"
+            }
+          ]
+        }
+      },
+      "responseMessage": "OK · FHIR ID: med-apt-44812"
+    },
+    {
+      "id": "FHIR-903",
+      "timestamp": "2026-11-27 08:12:44",
+      "outlet": "Klinik Pratama",
+      "resourceType": "Condition",
+      "patientLabel": "Siti Aminah (IHS-100029844)",
+      "httpStatus": 422,
+      "status": "Gagal",
+      "payloadJson": {
+        "resourceType": "Condition",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "code": "J06.9"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/100029844"
+        }
+      },
+      "responseMessage": "422 Unprocessable Entity: Practitioner IHS reference missing or branch offline during token refresh"
+    }
+  ],
+  "codeMappings": [
+    {
+      "id": "MAP-01",
+      "standard": "KFA",
+      "localCode": "OBT-AMX-500",
+      "localName": "Amoxicillin 500mg Kaplet",
+      "standardCode": "KFA-93001",
+      "standardDisplay": "Amoxicillin 500 mg Kaplet (KFA)",
+      "status": "Terpetakan"
+    },
+    {
+      "id": "MAP-02",
+      "standard": "ICD-10",
+      "localCode": "DX-ISPA",
+      "localName": "Infeksi Saluran Pernapasan Akut",
+      "standardCode": "J06.9",
+      "standardDisplay": "Acute upper respiratory infection, unspecified",
+      "status": "Terpetakan"
+    },
+    {
+      "id": "MAP-03",
+      "standard": "LOINC",
+      "localCode": "LAB-DL-01",
+      "localName": "Darah Lengkap (Hematologi)",
+      "standardCode": "58410-2",
+      "standardDisplay": "Complete blood count panel - Blood",
+      "status": "Terpetakan"
+    },
+    {
+      "id": "MAP-04",
+      "standard": "ICD-9-CM",
+      "localCode": "TND-NEB-01",
+      "localName": "Nebulisasi Uap Pernapasan",
+      "standardCode": "",
+      "standardDisplay": "",
+      "status": "Belum Terpetakan"
+    }
+  ],
+  "bpjsLogs": [
+    {
+      "id": "BPJ-01",
+      "timestamp": "2026-11-27 08:48:10",
+      "outlet": "Klinik Utama",
+      "service": "VClaim SEP",
+      "refNo": "0112R0011126V000413",
+      "responseCode": "200",
+      "message": "SEP Terbit Sukses",
+      "status": "Sukses"
+    },
+    {
+      "id": "BPJ-02",
+      "timestamp": "2026-11-27 08:50:19",
+      "outlet": "Apotek",
+      "service": "Apotek Online PRB",
+      "refNo": "PRB-0112A-882",
+      "responseCode": "200",
+      "message": "Klaim Resep PRB tercatat",
+      "status": "Sukses"
+    },
+    {
+      "id": "BPJ-03",
+      "timestamp": "2026-11-27 08:15:02",
+      "outlet": "Klinik Pratama",
+      "service": "Antrol FKTP Task ID",
+      "refNo": "ANT-KP-019",
+      "responseCode": "503",
+      "message": "Timeout koneksi internet cabang saat kirim Task ID 4",
+      "status": "Tertunda"
+    }
+  ],
+  "edgeNodes": [
+    {
+      "outletId": "klinikutama",
+      "outletName": "Klinik Utama",
+      "appVersion": "v2.4.1",
+      "dbEngine": "MySQL 8.0 + Local Outbox",
+      "masterVersionAck": 1,
+      "cpuLoad": "18%",
+      "memoryUsage": "42%",
+      "diskFreeGb": 184,
+      "lastHeartbeat": "Baru saja (Command Executed)",
+      "status": "Online"
+    },
+    {
+      "outletId": "klinikpratama",
+      "outletName": "Klinik Pratama",
+      "appVersion": "v2.4.1",
+      "dbEngine": "MySQL 8.0 + Local Outbox",
+      "masterVersionAck": 1,
+      "cpuLoad": "-",
+      "memoryUsage": "-",
+      "diskFreeGb": 112,
+      "lastHeartbeat": "Baru saja (Command Executed)",
+      "status": "Offline"
+    },
+    {
+      "outletId": "apotek",
+      "outletName": "Apotek",
+      "appVersion": "v2.4.1",
+      "dbEngine": "MySQL 8.0 + Local Outbox",
+      "masterVersionAck": 1,
+      "cpuLoad": "14%",
+      "memoryUsage": "36%",
+      "diskFreeGb": 210,
+      "lastHeartbeat": "6 detik lalu",
+      "status": "Online"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NTF-01",
+      "severity": "critical",
+      "title": "Klinik Pratama sedang Offline",
+      "message": "Cabang belum melakukan heartbeat selama 47 menit. 3 transaksi mengantre di outbox lokal.",
+      "targetRoute": "/dashboard/status-sinkronisasi",
+      "isRead": true,
+      "createdAt": "2026-11-27 08:45"
+    },
+    {
+      "id": "NTF-02",
+      "severity": "critical",
+      "title": "STR/SIP Dokter Expired",
+      "message": "drg. Maya Putri (Klinik Pratama) memiliki STR/SIP yang melewati tanggal berlaku (2026-11-10).",
+      "targetRoute": "/hr/str-sip-kompetensi",
+      "isRead": true,
+      "createdAt": "2026-11-27 08:00"
+    },
+    {
+      "id": "NTF-03",
+      "severity": "warn",
+      "title": "Stok Pusat Infus RL 500ml di Bawah Minimum",
+      "message": "Stok Gudang Pusat (950) di bawah batas aman (1000) dan batch mendekati expired 2026-12-25.",
+      "targetRoute": "/inventory/stok-konsolidasi",
+      "isRead": true,
+      "createdAt": "2026-11-27 08:30"
+    },
+    {
+      "id": "NTF-04",
+      "severity": "warn",
+      "title": "2 Permintaan Stok Cabang Menunggu Approval",
+      "message": "Permintaan Cefixime 100mg (Apotek) dan Infus RL 500ml (Klinik Utama) menunggu pengiriman.",
+      "targetRoute": "/inventory/mutasi-antar-outlet",
+      "isRead": true,
+      "createdAt": "2026-11-27 08:45"
+    },
+    {
+      "id": "NTF-05",
+      "severity": "info",
+      "title": "1 Payload FHIR SATUSEHAT Gagal",
+      "message": "Resource Condition untuk Siti Aminah (Klinik Pratama) perlu dikirim ulang.",
+      "targetRoute": "/integrasi/satusehat-monitoring-fhir",
+      "isRead": true,
+      "createdAt": "2026-11-27 08:15"
+    }
+  ],
+  "generalSettings": {
+    "groupName": "Klinik Group Nusantara",
+    "npwpGroup": "02.991.440.1-012.000",
+    "hqAddress": "Gedung Graha Medika Lt. 5, Jl. Sudirman, Jakarta Pusat",
+    "hqPhone": "021-5550001",
+    "defaultCurrency": "IDR",
+    "fiscalYearStart": "Januari",
+    "polyclinics": [
+      "Poli Umum",
+      "Poli Penyakit Dalam",
+      "Poli Anak",
+      "Poli Bedah",
+      "Poli Gigi",
+      "IGD 24 Jam",
+      "KIA / KB"
+    ],
+    "payers": [
+      "Umum / Mandiri",
+      "BPJS Kesehatan",
+      "AdMedika",
+      "Prudential",
+      "AXA Mandiri"
+    ],
+    "paymentMethods": [
+      "Tunai",
+      "QRIS Dinamis",
+      "Kartu Debit/Kredit EDC",
+      "Transfer Virtual Account",
+      "Piutang Klaim"
+    ]
+  },
+  "systemTariffs": [
+    {
+      "id": "TRF-01",
+      "code": "LAY-UMUM-01",
+      "name": "Konsultasi Dokter Umum",
+      "category": "Konsultasi",
+      "basePriceRp": 75000,
+      "bpjsTariffRp": 50000,
+      "applicableTo": "Semua Klinik",
+      "status": "Aktif"
+    },
+    {
+      "id": "TRF-02",
+      "code": "LAY-SPPD-01",
+      "name": "Konsultasi Dokter Spesialis Penyakit Dalam",
+      "category": "Konsultasi",
+      "basePriceRp": 200000,
+      "bpjsTariffRp": 145000,
+      "applicableTo": "Klinik Utama",
+      "status": "Aktif"
+    },
+    {
+      "id": "TRF-03",
+      "code": "TND-NEB-01",
+      "name": "Tindakan Nebulisasi Dewasa/Anak",
+      "category": "Tindakan",
+      "basePriceRp": 85000,
+      "bpjsTariffRp": 65000,
+      "applicableTo": "Semua Klinik",
+      "status": "Aktif"
+    },
+    {
+      "id": "TRF-04",
+      "code": "KMR-VIP-01",
+      "name": "Kamar Rawat Inap VIP / Hari",
+      "category": "Kamar",
+      "basePriceRp": 850000,
+      "bpjsTariffRp": 500000,
+      "applicableTo": "Klinik Utama",
+      "status": "Aktif"
+    }
+  ],
+  "securityPolicy": {
+    "enforceTwoFaForAdmins": false,
+    "minPasswordLength": 6,
+    "sessionTimeoutMinutes": 480,
+    "ipAllowlistEnabled": false,
+    "allowedIps": "127.0.0.1, 10.0.0.0/24"
+  },
+  "activeSessions": [
+    {
+      "sessionId": "SES-291244",
+      "userEmail": "owner@klinik.id",
+      "userName": "Owner / Direktur",
+      "role": "Owner / Direktur",
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleW",
+      "ip": "::1",
+      "loginAt": "2026-11-27 07:24"
+    },
+    {
+      "sessionId": "SES-INIT-01",
+      "userEmail": "owner@klinik.id",
+      "userName": "Owner / Direktur",
+      "role": "Owner / Direktur",
+      "device": "Chrome Desktop · Windows",
+      "ip": "127.0.0.1",
+      "loginAt": "2026-11-27 08:00:00"
+    }
+  ],
+  "auditTrails": [
+    {
+      "id": "AUD-58697-60",
+      "timestamp": "2026-11-27 07:47:38",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "HR",
+      "action": "UPDATE_CREDENTIAL",
+      "summary": "Memperbarui STR/SIP Dr. Hendra Kusuma",
+      "diff": null
+    },
+    {
+      "id": "AUD-47555-24",
+      "timestamp": "2026-11-27 07:45:47",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "Inventory",
+      "action": "APPROVE_STOCK_REQ",
+      "summary": "Menyetujui pengiriman REQ-CAB-02 (100 unit) ke Klinik Utama",
+      "diff": null
+    },
+    {
+      "id": "AUD-46331-98",
+      "timestamp": "2026-11-27 07:45:46",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "Inventory",
+      "action": "APPROVE_STOCK_REQ",
+      "summary": "Menyetujui pengiriman REQ-CAB-01 (200 unit) ke Apotek",
+      "diff": null
+    },
+    {
+      "id": "AUD-00977-95",
+      "timestamp": "2026-11-27 07:40:00",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "Pengaturan Sistem",
+      "action": "EDGE_COMMAND",
+      "summary": "Mengirim perintah FORCE_SYNC ke Klinik Pratama",
+      "diff": null
+    },
+    {
+      "id": "AUD-99276-47",
+      "timestamp": "2026-11-27 07:39:59",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "Pengaturan Sistem",
+      "action": "EDGE_COMMAND",
+      "summary": "Mengirim perintah FORCE_SYNC ke Klinik Utama",
+      "diff": null
+    },
+    {
+      "id": "AUD-98162-43",
+      "timestamp": "2026-11-27 07:39:58",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur (Semua Akses)",
+      "module": "Pengaturan Sistem",
+      "action": "EDGE_COMMAND",
+      "summary": "Mengirim perintah FORCE_SYNC ke Klinik Utama",
+      "diff": null
+    },
+    {
+      "id": "AUD-91244-88",
+      "timestamp": "2026-11-27 07:24:51",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur",
+      "module": "Auth",
+      "action": "LOGIN_SUCCESS",
+      "summary": "Login berhasil ke Cloud VPS (Owner / Direktur)",
+      "diff": null
+    },
+    {
+      "id": "AUD-01",
+      "timestamp": "2026-11-27 08:00:00",
+      "actorEmail": "owner@klinik.id",
+      "actorRole": "Owner / Direktur",
+      "module": "Pengaturan Sistem",
+      "action": "SYSTEM_INIT",
+      "summary": "Inisialisasi Cloud VPS Sync Hub v2 & Skema MySQL",
+      "diff": {
+        "before": null,
+        "after": {
+          "masterVersion": 1
+        }
+      }
+    }
+  ],
+  "backupSnapshots": [
+    {
+      "id": "BKP-20261127-0200",
+      "createdAt": "2026-11-27 02:00:00",
+      "type": "Otomatis Harian",
+      "sizeKb": 48,
+      "dbEngine": "MySQL + JSON Snapshot",
+      "status": "Sukses"
+    }
+  ]
+}

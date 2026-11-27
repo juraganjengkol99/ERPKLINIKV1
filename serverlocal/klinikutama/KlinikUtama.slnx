@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="backend/KlinikUtama.Api.csproj" />
+  <Project Path="../../shared/ErpKlinik.Core/ErpKlinik.Core.csproj" />
+</Solution>

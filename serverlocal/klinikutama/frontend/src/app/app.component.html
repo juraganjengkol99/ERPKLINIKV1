@@ -1,0 +1,410 @@
+<div class="app">
+  @if (sidebarOpen) {
+    <div class="side-backdrop" (click)="sidebarOpen = false" aria-hidden="true"></div>
+  }
+  <aside id="side" [class.open]="sidebarOpen">
+    <div class="brand">{{ brand }}<small>{{ where }}</small></div>
+    <div class="seg"><button type="button" class="on">Local server · :5181</button></div>
+
+    <div style="padding:0 14px 10px">
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:8px 10px;font-size:12px;color:#e2e8f0">
+        <div style="font-weight:600">{{ serviceMode === 'utama' ? 'Rawat Inap &amp; Jalan' : 'Rawat Jalan Saja' }}</div>
+        <div style="font-size:10px;opacity:.75;margin-top:2px">Jenis klinik dikontrol Cloud Pusat</div>
+      </div>
+    </div>
+
+    <input class="side-search" type="search" [(ngModel)]="menuSearch" placeholder="Cari menu cepat..." />
+
+    <nav>
+      @for (group of menuGroups; track group.name) {
+        <details [attr.open]="isGroupOpen(group.name) ? '' : null">
+          <summary (click)="toggleGroup(group.name, $event)">
+            <i>{{ group.code }}</i>
+            <span>{{ group.name }}</span>
+          </summary>
+          <div class="sub">
+            @for (item of group.items; track item) {
+              <button type="button" [class.on]="item === selectedPage && group.name === selectedGroup" (click)="selectPage(group.name, item)">
+                {{ item }}
+              </button>
+            }
+          </div>
+        </details>
+      }
+    </nav>
+  </aside>
+
+  <main>
+    <header>
+      <button class="ib menubtn" type="button" (click)="sidebarOpen = !sidebarOpen">Menu</button>
+      <div>
+        <div class="crumb">{{ selectedGroup }}</div>
+        <h1>{{ selectedPage }}</h1>
+      </div>
+      <div class="sp"></div>
+      <div class="hdr-actions">
+        <select class="ib" [ngModel]="activeRole" (ngModelChange)="onRoleChange($event)">
+          @for (r of availableRoles; track r) { <option [value]="r">Role: {{ r }}</option> }
+        </select>
+        <span class="pill" [ngClass]="connStatus">{{ connText }}</span>
+        <button class="ib" type="button" (click)="printPage()">Cetak</button>
+        <button class="ib" type="button" (click)="toggleOnlineMode()">{{ isOnline ? 'Simulasi Offline' : 'Online & Sync' }}</button>
+        <button class="ib" type="button" (click)="toggleTheme()">Tema</button>
+      </div>
+    </header>
+
+    <div class="wrap">
+      @if (selectedGroup === 'Dashboard Outlet') {
+        <div class="stats">
+          @for (s of stats; track s.label) {
+            <div class="stat"><span>{{ s.label }}</span><b>{{ s.value }}</b></div>
+          }
+        </div>
+        <div class="two">
+          <div class="panel">
+            <h2>Status Koneksi & Bridging Cabang</h2>
+            <div class="row"><span>Internet Cabang</span><span class="pill" [ngClass]="isOnline ? 'ok' : 'bad'">{{ isOnline ? 'Normal' : 'Terputus' }}</span></div>
+            <div class="row"><span>Cloud VPS (:5180)</span><span class="pill" [ngClass]="isOnline ? 'ok' : 'warn'">{{ isOnline ? 'Terhubung (v' + masterVersion + ')' : 'Antre Lokal' }}</span></div>
+            <div class="row"><span>SATUSEHAT FHIR</span><span class="pill" [ngClass]="isOnline ? 'ok' : 'warn'">{{ isOnline ? 'Siap' : 'Antre FHIR' }}</span></div>
+            <div class="row"><span>BPJS VClaim / Antrol</span><span class="pill" [ngClass]="isOnline ? 'ok' : 'warn'">{{ isOnline ? 'Aktif' : 'Mode Offline' }}</span></div>
+          </div>
+          <div class="panel">
+            <h2>Ketahanan Offline-First</h2>
+            <div class="panel-body">
+              <p style="margin-top:0">Semua transaksi Pendaftaran, SOAP, Rawat Inap, IGD, Farmasi, dan Kasir disimpan persisten di server lokal <code>:5181</code> meski internet mati.</p>
+              <button class="btn" type="button" (click)="syncNow()">Kirim Antrean ke Cloud VPS ({{ pendingOutbox.length }})</button>
+            </div>
+          </div>
+        </div>
+
+      } @else if (selectedGroup === 'Pendaftaran') {
+        @if (drawerMode === 'register') {
+          <app-patient-register-form [model]="regForm" (submitted)="registerPatient()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Antrean & Registrasi Pasien
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari RM / Nama / Poli / Dokter..." />
+            <select class="select" [(ngModel)]="statusFilter" (ngModelChange)="page = 1">
+              <option value="Semua">Semua Status</option>
+              <option value="Menunggu Poli">Menunggu Poli</option>
+              <option value="Sedang Diperiksa">Sedang Diperiksa</option>
+              <option value="Selesai Poli">Selesai Poli</option>
+            </select>
+            <button class="btn btn-sm" type="button" (click)="drawerMode = 'register'">+ Registrasi Pasien</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Antrean</th><th>No. RM</th><th>Pasien</th><th>Poli</th><th>Dokter</th><th>Penjamin</th><th>No. SEP</th><th>Status</th></tr></thead>
+              <tbody>
+                @for (e of paged(encounters); track e.encounterId) {
+                  @if (statusFilter === 'Semua' || e.status === statusFilter) {
+                    <tr>
+                      <td><b>{{ e.queueNo }}</b></td><td><code>{{ e.rmNumber }}</code></td><td><b>{{ e.patientName }}</b></td>
+                      <td>{{ e.poliName }}</td><td>{{ e.doctorName }}</td><td>{{ e.payerType }}</td><td><code>{{ e.sepNo }}</code></td>
+                      <td><span class="pill" [ngClass]="e.status === 'Selesai Poli' ? 'ok' : 'info'">{{ e.status }}</span></td>
+                    </tr>
+                  }
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(encounters).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Rawat Jalan') {
+        @if (drawerMode === 'soap') {
+          <app-soap-form [model]="soapForm" (submitted)="saveSoap()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Pemeriksaan Klinis SOAP & e-Resep
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari pasien / ICD-10 / resep..." />
+            <button class="btn btn-sm" type="button" (click)="drawerMode = 'soap'">+ Input SOAP &amp; Resep</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Pasien</th><th>Subjektif</th><th>Objektif</th><th>Diagnosa ICD-10</th><th>Terapi / e-Resep</th><th>FHIR</th></tr></thead>
+              <tbody>
+                @for (s of paged(soapNotes); track s.soapId) {
+                  <tr>
+                    <td><b>{{ s.patientLabel }}</b></td><td class="wrap-cell">{{ s.subjective }}</td><td class="wrap-cell">{{ s.objective }}</td>
+                    <td><code>{{ s.icd10Code }}</code></td><td class="wrap-cell">{{ s.prescriptionSummary }}</td>
+                    <td><span class="pill" [ngClass]="s.fhirStatus.includes('Terkirim') ? 'ok' : 'warn'">{{ s.fhirStatus }}</span></td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(soapNotes).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Rawat Inap') {
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Bed Management &amp; Visite DPJP
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari kamar / pasien / DPJP..." />
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Kamar &amp; Bed</th><th>Pasien</th><th>Diagnosa</th><th>DPJP</th><th class="num">Visite</th><th>Status</th><th>Aksi</th></tr></thead>
+              <tbody>
+                @for (b of paged(beds); track b.bedId) {
+                  <tr>
+                    <td><b>{{ b.roomName }}</b> ({{ b.bedCode }})</td><td>{{ b.patientLabel }}</td><td>{{ b.diagnosis }}</td><td>{{ b.dpjp }}</td>
+                    <td class="num">{{ b.visiteCount }}x</td>
+                    <td><span class="pill" [ngClass]="b.status === 'Tersedia' ? 'ok' : b.status === 'Terisi' ? 'info' : 'warn'">{{ b.status }}</span></td>
+                    <td>
+                      @if (b.status === 'Tersedia') { <button class="btn btn-sm" type="button" (click)="bedAction(b.bedId, 'admit')">Admisi</button> }
+                      @if (b.status === 'Terisi') {
+                        <button class="ib btn-sm" type="button" (click)="bedAction(b.bedId, 'visite')">+ Visite</button>
+                        <button class="ib btn-sm" type="button" (click)="bedAction(b.bedId, 'cppt')">+ CPPT</button>
+                        <button class="btn btn-sm" type="button" (click)="bedAction(b.bedId, 'discharge')">Pulang</button>
+                      }
+                      @if (b.status === 'Cleaning') { <button class="ib btn-sm" type="button" (click)="bedAction(b.bedId, 'clean')">Siap Pakai</button> }
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(beds).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+        @if (selectedPage === 'CPPT & Asuhan') {
+          <div class="panel">
+            <h2>Catatan Perkembangan Pasien Terintegrasi (CPPT)</h2>
+            <div class="tw">
+              <table>
+                <thead><tr><th>Jam</th><th>Pasien</th><th>Kamar</th><th>Profesi</th><th>Catatan &amp; Instruksi</th><th>Verifikator</th></tr></thead>
+                <tbody>
+                  @for (c of paged(cpptRecords); track c.cpptId) {
+                    <tr><td>{{ c.recordedAt }}</td><td><b>{{ c.patientLabel }}</b></td><td>{{ c.roomName }}</td><td><span class="pill info">{{ c.profession }}</span></td><td class="wrap-cell">{{ c.note }}</td><td>{{ c.verifiedBy }}</td></tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
+        }
+
+      } @else if (selectedGroup === 'IGD') {
+        @if (drawerMode === 'igd') {
+          <app-igd-form [model]="igdForm" (submitted)="saveIgd()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Triase &amp; Gawat Darurat
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari pasien / triase..." />
+            <button class="btn btn-sm" type="button" (click)="drawerMode = 'igd'">+ Pasien IGD</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Jam</th><th>Pasien</th><th>Triase</th><th>Keluhan</th><th>TTV</th><th>Tindak Lanjut</th></tr></thead>
+              <tbody>
+                @for (g of paged(igdCases); track g.caseId) {
+                  <tr><td>{{ g.time }}</td><td><b>{{ g.patientName }}</b></td><td><span class="pill warn">{{ g.triageLevel }}</span></td><td class="wrap-cell">{{ g.complaint }}</td><td>{{ g.vitals }}</td><td>{{ g.disposition }}</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(igdCases).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Rekam Medis') {
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Indeks Rekam Medis Elektronik (RME)
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari No. RM / NIK / Nama / IHS..." />
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>No. RM</th><th>Nama Pasien</th><th>NIK</th><th>No. BPJS</th><th>IHS Number</th><th>Gender</th><th>Alamat</th></tr></thead>
+              <tbody>
+                @for (p of paged(patients); track p.rmNumber) {
+                  <tr><td><code>{{ p.rmNumber }}</code></td><td><b>{{ p.fullName }}</b></td><td>{{ p.nik }}</td><td>{{ p.bpjsNo }}</td><td><span class="pill ok">{{ p.ihsId }}</span></td><td>{{ p.gender }}</td><td>{{ p.address }}</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(patients).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Penunjang Medis') {
+        @if (drawerMode === 'lab') {
+          <app-lab-order-form [model]="labForm" (submitted)="saveLab()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Order &amp; Hasil Penunjang
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari pemeriksaan / pasien..." />
+            <button class="btn btn-sm" type="button" (click)="drawerMode = 'lab'">+ Order / Input Hasil</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>No. Order</th><th>Jam</th><th>Pasien</th><th>Modalitas</th><th>Pemeriksaan</th><th>Hasil</th><th>Status</th></tr></thead>
+              <tbody>
+                @for (l of paged(labOrders); track l.orderId) {
+                  <tr><td><code>{{ l.orderId }}</code></td><td>{{ l.orderedAt }}</td><td><b>{{ l.patientLabel }}</b></td><td>{{ l.modality }}</td><td>{{ l.examName }}</td><td class="wrap-cell">{{ l.resultValue }}</td><td><span class="pill" [ngClass]="l.status.includes('Selesai') ? 'ok' : 'warn'">{{ l.status }}</span></td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(labOrders).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Farmasi') {
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Pelayanan Resep &amp; Penyerahan Obat
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari No. Resep / Pasien / Obat..." />
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>No. Resep</th><th>Jam</th><th>Pasien</th><th>Dokter</th><th>Obat &amp; Signa</th><th>Status</th><th>Aksi</th></tr></thead>
+              <tbody>
+                @for (rx of paged(prescriptions); track rx.rxNo) {
+                  <tr>
+                    <td><code>{{ rx.rxNo }}</code></td><td>{{ rx.createdAt }}</td><td><b>{{ rx.patientLabel }}</b></td><td>{{ rx.doctorName }}</td>
+                    <td class="wrap-cell">{{ rx.itemsSummary }} ({{ rx.signa }})</td>
+                    <td><span class="pill" [ngClass]="rx.status === 'Diserahkan' ? 'ok' : 'warn'">{{ rx.status }}</span></td>
+                    <td>@if (rx.status !== 'Diserahkan') { <button class="btn btn-sm" type="button" (click)="dispenseRx(rx.rxNo)">Serahkan Obat</button> }</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(prescriptions).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Kasir' || selectedGroup === 'Laporan Outlet') {
+        <div class="panel">
+          <h2>
+            {{ selectedGroup }} — {{ selectedPage }}
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari Invoice / Pasien..." />
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>No. Invoice</th><th>Pasien</th><th>Rincian Layanan</th><th>Penjamin</th><th class="num">Total</th><th>Status</th><th>Aksi</th></tr></thead>
+              <tbody>
+                @for (inv of paged(invoices); track inv.invoiceNo) {
+                  <tr>
+                    <td><code>{{ inv.invoiceNo }}</code></td><td><b>{{ inv.patientLabel }}</b></td><td class="wrap-cell">{{ inv.serviceSummary }}</td>
+                    <td>{{ inv.payerType }}</td><td class="num"><b>{{ inv.displayAmount }}</b></td>
+                    <td><span class="pill" [ngClass]="inv.status === 'Lunas' ? 'ok' : 'warn'">{{ inv.status }}</span></td>
+                    <td>@if (inv.status !== 'Lunas') { <button class="btn btn-sm" type="button" (click)="payInvoice(inv.invoiceNo)">Bayar Lunas</button> }</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(invoices).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'BPJS Kesehatan' || selectedGroup === 'SATUSEHAT') {
+        <div class="panel">
+          <h2>{{ selectedGroup }} — {{ selectedPage }}</h2>
+          <div class="form">
+            <label>No. Kartu BPJS / NIK Pasien <input [(ngModel)]="bpjsCardInput" /></label>
+            <label>Hasil Validasi Bridging <input [value]="bpjsCheckResult" disabled /></label>
+            <label>&nbsp;<button class="btn" type="button" (click)="showToast('Bridging ' + selectedGroup + ' terverifikasi')">Cek Bridging Sekarang</button></label>
+          </div>
+        </div>
+
+      } @else if (selectedGroup === 'Inventory Outlet') {
+        @if (drawerMode === 'opname') {
+          <app-opname-form [model]="opnameForm" [items]="inventory" (submitted)="submitOpname()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Stok Lokal &amp; Permintaan ke Gudang Pusat
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari KFA / Obat / Batch..." />
+            <button class="ib btn-sm" type="button" (click)="drawerMode = 'opname'">+ Stok Opname</button>
+            <button class="btn btn-sm" type="button" (click)="requestCentralStock()">Minta Stok Pusat</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Kode KFA</th><th>Nama Barang</th><th>Kategori</th><th>Batch</th><th>Expired</th><th class="num">Stok Lokal</th></tr></thead>
+              <tbody>
+                @for (i of paged(inventory); track i.code) {
+                  <tr><td><code>{{ i.code }}</code></td><td><b>{{ i.name }}</b></td><td>{{ i.category }}</td><td><code>{{ i.batchNo }}</code></td><td>{{ i.expiredDate }}</td><td class="num"><b>{{ i.localStock }}</b> {{ i.unit }}</td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(inventory).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Sinkronisasi') {
+        <div class="panel">
+          <h2>
+            {{ selectedPage }} — Outbox Sinkronisasi Lokal
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari modul / ringkasan..." />
+            <button class="btn btn-sm" type="button" (click)="syncNow()">Sinkron Sekarang</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>ID</th><th>Waktu</th><th>Modul</th><th>Ringkasan</th><th>Status</th></tr></thead>
+              <tbody>
+                @for (s of paged(syncOutbox); track s.id) {
+                  <tr><td><code>{{ s.id }}</code></td><td>{{ s.createdAt }}</td><td>{{ s.entityType }}</td><td class="wrap-cell">{{ s.summary }}</td><td><span class="pill" [ngClass]="s.status === 'Tersinkron' ? 'ok' : 'warn'">{{ s.status }}</span></td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(syncOutbox).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Pengguna Outlet') {
+        @if (drawerMode === 'user') {
+          <app-branch-user-form [model]="newUser" (submitted)="saveUser()" (cancelled)="drawerMode = null" />
+        }
+        <div class="panel">
+          <h2>
+            {{ selectedPage }}
+            <span class="sp"></span>
+            <input class="input" [(ngModel)]="tableSearch" (ngModelChange)="page = 1" placeholder="Cari user / role..." />
+            <button class="btn btn-sm" type="button" (click)="drawerMode = 'user'">+ Tambah User</button>
+          </h2>
+          <div class="tw">
+            <table>
+              <thead><tr><th>Nama</th><th>Role</th><th>Outlet</th><th>Status</th><th>Sinkron</th></tr></thead>
+              <tbody>
+                @for (u of paged(users); track u.name + u.role) {
+                  <tr><td><b>{{ u.name }}</b></td><td>{{ u.role }}</td><td>{{ u.outlet }}</td><td><span class="pill ok">{{ u.status }}</span></td><td><span class="pill" [ngClass]="u.syncStatus === 'Tersinkron' ? 'ok' : 'warn'">{{ u.syncStatus }}</span></td></tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <app-table-pager [total]="filtered(users).length" [(page)]="page" [(pageSize)]="pageSize" />
+        </div>
+
+      } @else if (selectedGroup === 'Pengaturan Lokal') {
+        <div class="panel">
+          <h2>Pengaturan Lokal — {{ selectedPage }}</h2>
+          <div class="form">
+            <label>Nama Outlet <input [value]="outletName" disabled /></label>
+            <label>Kode Aktivasi Lisensi <input [(ngModel)]="licenseForm.activationCode" /></label>
+            <label>Status Lisensi <input [value]="licenseForm.status" disabled /></label>
+            <label>Printer Thermal Struk <input [(ngModel)]="licenseForm.printerName" /></label>
+          </div>
+          <div class="row">
+            <span class="hint-text">Versi Master Cloud: v{{ masterVersion }}</span>
+            <button class="btn" type="button" (click)="verifyLicense()">Verifikasi Lisensi ke Cloud VPS</button>
+          </div>
+        </div>
+      }
+    </div>
+  </main>
+</div>
+
+<div id="toast" [style.opacity]="toastVisible ? 1 : 0">{{ toastMessage }}</div>

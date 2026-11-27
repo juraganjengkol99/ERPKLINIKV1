@@ -1,0 +1,152 @@
+@if (!state.isAuthenticated()) {
+  <div style="min-height:100vh;display:grid;place-items:center;background:var(--bg);padding:20px">
+    <div class="panel" style="width:min(440px,94vw);margin:0;box-shadow:0 12px 32px rgba(0,0,0,.08)">
+      <div style="background:var(--side);color:#fff;padding:22px 24px">
+        <div style="font-size:19px;font-weight:700">Klinik Group — Cloud VPS</div>
+        <div style="font-size:12.5px;color:var(--sideink);margin-top:2px">
+          Dashboard Manajemen Pusat & Database Konsolidasi Multi-Cabang
+        </div>
+      </div>
+      <div class="form" style="grid-template-columns:1fr;padding:22px 24px">
+        @if (loginError) {
+          <div class="pill bad" style="padding:10px 12px;border-radius:8px;white-space:normal">
+            {{ loginError }}
+          </div>
+        }
+        <label>
+          Email / Username (MySQL Auth)
+          <input [(ngModel)]="loginEmail" placeholder="owner@klinik.id" (keyup.enter)="submitLogin()" />
+        </label>
+        <label>
+          Password
+          <input type="password" [(ngModel)]="loginPassword" placeholder="••••••" (keyup.enter)="submitLogin()" />
+        </label>
+        @if (requires2fa) {
+          <label>
+            Kode OTP 2FA (6 Digit)
+            <input [(ngModel)]="loginOtp" placeholder="123456" maxlength="6" (keyup.enter)="submitLogin()" />
+          </label>
+        }
+        <button class="btn" type="button" (click)="submitLogin()" style="justify-content:center;padding:10px 14px">
+          Masuk ke Cloud VPS
+        </button>
+
+        <div style="border-top:1px solid var(--line);padding-top:12px;margin-top:4px">
+          <div style="font-size:12px;color:var(--mut);margin-bottom:8px;font-weight:600">
+            Akun Demo Cepat (Password: 123456):
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <button class="ib" type="button" (click)="fillDemoLogin('owner@klinik.id')">Owner / Direktur</button>
+            <button class="ib" type="button" (click)="fillDemoLogin('andi@klinik.id')">Dr. Andi (Klinik Utama)</button>
+            <button class="ib" type="button" (click)="fillDemoLogin('sari@klinik.id')">Sari (Apotek)</button>
+            <button class="ib" type="button" (click)="fillDemoLogin('budi@klinik.id')">Budi (Nonaktif)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="app">
+    @if (sidebarOpen) {
+      <div class="side-backdrop" (click)="sidebarOpen = false" aria-hidden="true"></div>
+    }
+    <aside id="side" [class.open]="sidebarOpen">
+      <div class="brand">
+        {{ brand }}
+        <small>{{ where }}</small>
+      </div>
+
+      <div class="seg">
+        <button type="button" class="on">Cloud VPS · v2</button>
+      </div>
+
+      <input
+        class="side-search"
+        type="search"
+        [(ngModel)]="menuSearch"
+        placeholder="Cari 68 menu cepat..."
+        aria-label="Cari menu cepat" />
+
+      <nav aria-label="Navigasi Modul Cloud VPS">
+        @for (group of filteredMenuGroups; track group.name) {
+          <details [attr.open]="isGroupOpen(group.name) ? '' : null">
+            <summary (click)="toggleGroup(group.name, $event)">
+              <i>{{ group.code }}</i>
+              <span>{{ group.name }}</span>
+            </summary>
+            <div class="sub">
+              @for (item of group.items; track item.slug) {
+                <a
+                  [routerLink]="['/', group.routeBase, item.slug]"
+                  routerLinkActive="on">
+                  <span>{{ item.label }}</span>
+                  @if (item.slug === 'notifikasi' && state.unreadNotifications() > 0) {
+                    <span class="nav-badge">{{ state.unreadNotifications() }}</span>
+                  }
+                </a>
+              }
+            </div>
+          </details>
+        }
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <button class="ib menubtn" type="button" aria-label="Buka menu" (click)="sidebarOpen = !sidebarOpen">
+          Menu
+        </button>
+        <div>
+          <div class="crumb">{{ activeGroupName() }}</div>
+          <h1>{{ activePageName() }}</h1>
+        </div>
+        <div class="sp"></div>
+        <div class="hdr-actions">
+          @if (state.isOwnerAccount()) {
+            <select
+              class="ib"
+              aria-label="Preview Role RBAC"
+              [ngModel]="state.activeRole()"
+              (ngModelChange)="state.setPreviewRole($event)">
+              @for (r of state.availableRoles; track r) {
+                <option [value]="r">Preview: {{ r }}</option>
+              }
+            </select>
+          }
+          <span class="pill" [ngClass]="state.connStatus()">{{ state.connText() }}</span>
+          <span class="pill info">{{ state.currentUser()?.name }}</span>
+          <button class="ib" type="button" (click)="state.exportJournalsCsv()">Export CSV</button>
+          <button class="ib" type="button" (click)="printReport()">Cetak</button>
+          <button class="ib" type="button" (click)="state.refreshDashboard()">Refresh Sync</button>
+          <button class="ib" type="button" (click)="toggleTheme()">Tema</button>
+          <button class="ib danger" type="button" (click)="state.logout()">Logout</button>
+        </div>
+      </header>
+
+      <div class="wrap">
+        <router-outlet />
+      </div>
+    </main>
+  </div>
+}
+
+<div id="toast" [style.opacity]="state.toastVisible() ? 1 : 0">{{ state.toastMessage() }}</div>
+
+@if (state.confirmModal(); as modal) {
+  <div class="modal-backdrop" role="dialog" aria-modal="true" (click)="state.confirmModal.set(null)">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <h2 style="margin:0;padding:14px 18px;border-bottom:1px solid var(--line);font-size:15px">{{ modal.title }}</h2>
+      <div style="padding:18px;color:var(--ink)">{{ modal.message }}</div>
+      <div style="display:flex;justify-content:flex-end;gap:8px;padding:12px 18px;border-top:1px solid var(--line)">
+        <button class="ib" type="button" (click)="state.confirmModal.set(null)">Batal</button>
+        <button
+          class="btn"
+          type="button"
+          [style.background]="modal.danger ? 'var(--bad)' : 'var(--acc)'"
+          (click)="state.executeConfirm()">
+          {{ modal.confirmLabel }}
+        </button>
+      </div>
+    </div>
+  </div>
+}

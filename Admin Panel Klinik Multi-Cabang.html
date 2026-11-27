@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin Panel Klinik Multi-Cabang</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f7f9;--surf:#fff;--ink:#14263b;--mut:#5d6f82;--line:#dde5ec;--side:#0f2a43;--sideink:#c5d4e3;--acc:#0e8f8a;--accbg:#dff3f1;--ok:#15803d;--okbg:#dcf5e4;--bad:#b42318;--badbg:#fde4e1;--warn:#9a5b00;--warnbg:#fdefd2;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1622;--surf:#112233;--ink:#e6eef6;--mut:#93a6b8;--line:#223a52;--side:#081420;--sideink:#9fb4c8;--acc:#37c1ba;--accbg:#12403f;--ok:#5fd68a;--okbg:#12361f;--bad:#ff8a7e;--badbg:#42191a;--warn:#f2b84b;--warnbg:#3f2e0d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1622;--surf:#112233;--ink:#e6eef6;--mut:#93a6b8;--line:#223a52;--side:#081420;--sideink:#9fb4c8;--acc:#37c1ba;--accbg:#12403f;--ok:#5fd68a;--okbg:#12361f;--bad:#ff8a7e;--badbg:#42191a;--warn:#f2b84b;--warnbg:#3f2e0d;color-scheme:dark}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 'Plus Jakarta Sans',system-ui,sans-serif}
+.app{display:grid;grid-template-columns:272px 1fr;height:100%}
+aside{background:var(--side);color:var(--sideink);display:flex;flex-direction:column;min-height:0}
+.brand{padding:16px 18px;color:#fff;font-weight:700;font-size:16px}
+.brand small{display:block;font-weight:400;color:var(--sideink);font-size:12px}
+.seg{display:grid;grid-template-columns:1fr 1fr;margin:0 14px 10px;background:rgba(255,255,255,.08);border-radius:8px;padding:3px}
+.seg button{background:none;border:0;color:var(--sideink);padding:7px;border-radius:6px;font:inherit;font-weight:600;cursor:pointer}
+.seg button.on{background:var(--acc);color:#fff}
+select{width:calc(100% - 28px);margin:0 14px 10px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;font:inherit}
+select option{color:#14263b}
+nav{overflow:auto;flex:1;padding:0 8px 16px}
+details{margin-bottom:2px}
+summary{list-style:none;cursor:pointer;padding:9px 10px;border-radius:8px;font-weight:600;color:#fff;display:flex;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:rgba(255,255,255,.07)}
+summary i{width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-style:normal;font-size:11px;flex:none}
+summary::after{content:'›';margin-left:auto;transition:transform .15s}
+details[open]>summary::after{transform:rotate(90deg)}
+.sub{margin:2px 0 6px 22px;border-left:1px solid rgba(255,255,255,.15)}
+.sub button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--sideink);padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;border-radius:0 6px 6px 0}
+.sub button:hover{color:#fff}
+.sub button.on{color:#fff;background:rgba(55,193,186,.22);box-shadow:inset 2px 0 var(--acc)}
+main{overflow:auto;min-width:0}
+header{display:flex;align-items:center;gap:12px;padding:12px 24px;background:var(--surf);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header h1{font-size:17px;margin:0}
+header .crumb{color:var(--mut);font-size:12px}
+.sp{flex:1}
+.pill{padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+.ok{background:var(--okbg);color:var(--ok)}.bad{background:var(--badbg);color:var(--bad)}.warn{background:var(--warnbg);color:var(--warn)}.info{background:var(--accbg);color:var(--acc)}
+.ib{border:1px solid var(--line);background:var(--surf);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit}
+.menubtn{display:none}
+.wrap{padding:22px 24px;max-width:1180px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:18px}
+.stat{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.stat b{display:block;font-size:24px;margin-top:2px}.stat span{color:var(--mut);font-size:12.5px}
+.panel{background:var(--surf);border:1px solid var(--line);border-radius:10px;margin-bottom:18px;overflow:hidden}
+.panel h2{font-size:14px;margin:0;padding:12px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th,td{text-align:left;padding:10px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{color:var(--mut);font-weight:600;font-size:12.5px}
+tr:last-child td{border-bottom:0}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+.btn:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;padding:16px}
+label{display:grid;gap:4px;font-weight:600;font-size:12.5px;color:var(--mut)}
+label input,label select{width:100%;margin:0;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-weight:400}
+.empty{padding:40px 20px;text-align:center;color:var(--mut)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.row{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--line)}.row:last-child{border:0}
+#toast{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none}
+@media(max-width:860px){.app{grid-template-columns:1fr}aside{position:fixed;inset:0 auto 0 0;width:280px;z-index:20;transform:translateX(-100%);transition:transform .2s}aside.open{transform:none}.menubtn{display:block}.two{grid-template-columns:1fr}.wrap{padding:16px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><div class="app">
+<aside id="side">
+ <div class="brand">Klinik Group<small id="where"></small></div>
+ <div class="seg"><button id="mCloud" class="on">Cloud VPS</button><button id="mLocal">Local server</button></div>
+ <select id="outlet" aria-label="Tipe outlet" hidden>
+  <option value="utama">Klinik Utama (Rawat Inap & Jalan)</option>
+  <option value="pratama">Klinik Pratama (Rawat Jalan)</option>
+  <option value="apotek">Apotek</option></select>
+ <nav id="nav"></nav>
+</aside>
+<main>
+ <header><button class="ib menubtn" id="mb" aria-label="Buka menu">Menu</button>
+  <div><div class="crumb" id="crumb"></div><h1 id="title"></h1></div><div class="sp"></div>
+  <span class="pill" id="conn"></span><button class="ib" id="theme">Tema</button></header>
+ <div class="wrap" id="view"></div>
+</main></div><div id="toast"></div>
+<script>
+const G=(n,c,i)=>({n,c,i});
+const CLOUD=[
+G('Dashboard','DB',['Ringkasan Seluruh Outlet','Kinerja per Outlet','Status Sinkronisasi','Status Integrasi','Notifikasi']),
+G('Manajemen Outlet','MO',['Daftar Outlet','Tambah Outlet Baru','Template Modul per Tipe','Pengaturan Cabang','Lisensi & Aktivasi','Arsip Outlet']),
+G('HR','HR',['Data Karyawan','Manajemen User','Role & Permission','Absensi & Jadwal','STR/SIP & Kompetensi','Penggajian & Jasa Medis','Rekrutmen & Kinerja']),
+G('Keuangan','KE',['Kas & Bank','Penerimaan','Pengeluaran','Piutang BPJS & Asuransi','Hutang Supplier','Anggaran','Rekonsiliasi Setoran']),
+G('Akunting','AK',['Chart of Accounts','Jurnal','Buku Besar','Laporan Keuangan','Konsolidasi Outlet','Aset Tetap','Pajak']),
+G('Purchasing','PU',['Permintaan Pembelian','Purchase Order','Penerimaan Barang','Retur Pembelian','Master Supplier']),
+G('Inventory','IN',['Master Barang (KFA)','Stok Konsolidasi','Mutasi Antar Outlet','Stok Opname','Batch & Expired','Gudang Pusat']),
+G('GA','GA',['Aset & Inventaris','Pemeliharaan & Kalibrasi','Perizinan Outlet','Kendaraan','Vendor Jasa']),
+G('Marketing','MK',['Data Pasien Konsolidasi','Promo & Paket','Loyalitas','Broadcast WhatsApp/SMS','Survei Kepuasan']),
+G('Integrasi','IT',['SATUSEHAT: Konfigurasi','SATUSEHAT: Monitoring FHIR','SATUSEHAT: Mapping Kode','BPJS: Konfigurasi','BPJS: Monitoring Klaim','Sinkronisasi Data']),
+G('Laporan Konsolidasi','LP',['Kunjungan & Pendapatan','Klaim BPJS','Stok, SDM, Keuangan','Laporan Regulasi']),
+G('Pengaturan Sistem','PS',['Master Umum & Tarif','Keamanan (2FA)','Audit Trail','Backup & Restore','Manajemen Server Lokal'])];
+const common=[G('Dashboard Outlet','DB',['Ringkasan Hari Ini','Status Koneksi','Antrean Sinkronisasi'])];
+const tail=[G('Sinkronisasi','SY',['Status Sinkron Cloud','Log Sinkronisasi','Sinkron Manual','Data Tertunda Offline']),
+G('Pengguna Outlet','PO',['Daftar User Outlet','Permintaan Perubahan Akses']),
+G('Pengaturan Lokal','PL',['Profil Outlet','Printer & Perangkat','Backup Lokal','Versi & Lisensi'])];
+const klinik=(ri)=>[...common,G('Pendaftaran','PD',['Pasien Baru/Lama','Verifikasi BPJS','Validasi NIK & IHS','Antrean Online','Rujukan Masuk',...(ri?['Admisi & SEP']:[])]),
+G('Rawat Jalan','RJ',['Antrean Poli','Pemeriksaan SOAP','Diagnosa & Tindakan','Resep Elektronik','Order Lab/Radiologi','Rujukan Keluar']),
+...(ri?[G('Rawat Inap','RI',['Kamar & Tempat Tidur','Pasien Rawat Inap','CPPT & Asuhan','Visite Dokter','Pindah Kamar','Pulang']),G('IGD','GD',['Triase','Penanganan Gawat Darurat'])]:[]),
+G('Rekam Medis','RM',['RME','Riwayat Pasien','Pengkodean Diagnosa','Resume Medis','Informed Consent']),
+...(ri?[G('Penunjang Medis','PM',['Laboratorium','Radiologi','Fisioterapi'])]:[]),
+G('Farmasi','FA',['Resep Masuk','Penyerahan Obat','Stok Farmasi','Retur & Expired']),
+G('Kasir','KS',['Tagihan Pasien','Pembayaran & Deposit','Tutup Kasir','Refund']),
+G('BPJS Kesehatan','BP',ri?['Cek Kepesertaan','SEP','Rujukan VClaim','Antrean Mobile JKN','Aplicares','Log Bridging']:['Cek Kepesertaan','P-Care Kunjungan','Rujukan','Prolanis & Skrining','Log Bridging']),
+G('SATUSEHAT','SS',['Status Kirim per Pasien','Antrean Kirim FHIR','Kirim Ulang Gagal','Pencocokan IHS Number']),
+G('Inventory Outlet','IV',['Stok Barang','Permintaan ke Pusat','Penerimaan Barang','Mutasi & Opname']),
+G('Laporan Outlet','LO',['Kunjungan & Diagnosa','Pendapatan','Laporan BPJS','Laporan Regulasi']),...tail];
+const LOCAL={utama:klinik(true),pratama:klinik(false),
+apotek:[...common,G('Penjualan','PJ',['Resep','Penjualan Bebas (OTC)','Retur Penjualan','Cek Stok Cepat']),G('Kasir','KS',['Transaksi','Tutup Kasir']),
+G('Pelayanan Farmasi','FA',['Telaah Resep','Peracikan','Etiket & Info Obat','Narkotika/Psikotropika']),
+G('Stok Obat','SO',['Stok per Batch','Penerimaan Barang','Permintaan ke Pusat','Mutasi & Opname','Obat Rusak/Expired']),
+G('Integrasi','IT',['SATUSEHAT Medication','BPJS PRB']),G('Laporan Apotek','LA',['Penjualan','Stok','Laba','Narkotika/Psikotropika','Obat Terlaris']),...tail]};
+const OUT={utama:'Klinik Utama',pratama:'Klinik Pratama',apotek:'Apotek'};
+let S={mode:'cloud',type:'utama',group:'Dashboard',page:'Ringkasan Seluruh Outlet'};
+const $=id=>document.getElementById(id);
+const toast=m=>{const t=$('toast');t.textContent=m;t.style.opacity=1;setTimeout(()=>t.style.opacity=0,2200)};
+function menu(){return S.mode==='cloud'?CLOUD:LOCAL[S.type]}
+function nav(){
+ $('nav').innerHTML=menu().map((g,gi)=>`<details ${g.n===S.group?'open':''}><summary><i>${g.c}</i>${g.n}</summary><div class="sub">${g.i.map(p=>`<button data-g="${gi}" data-p="${p}" class="${p===S.page&&g.n===S.group?'on':''}">${p}</button>`).join('')}</div></details>`).join('');
+ $('nav').querySelectorAll('button').forEach(b=>b.onclick=()=>{const g=menu()[b.dataset.g];S.group=g.n;S.page=b.dataset.p;render();$('side').classList.remove('open')});
+}
+const pill=(t,c)=>`<span class="pill ${c}">${t}</span>`;
+const stat=(l,v)=>`<div class="stat"><span>${l}</span><b>${v}</b></div>`;
+function dash(){
+ if(S.mode==='cloud')return `<div class="stats">${stat('Outlet online','2 dari 3')+stat('Kunjungan hari ini','412')+stat('Pendapatan hari ini','Rp 86,4 jt')+stat('Data menunggu sinkron','37')}</div>
+ <div class="panel"><h2>Status outlet</h2><div class="tw"><table><tr><th>Outlet</th><th>Tipe</th><th>Koneksi</th><th>Sinkron terakhir</th><th>SATUSEHAT</th><th>BPJS</th></tr>
+ <tr><td>Klinik Utama</td><td>Klinik Utama</td><td>${pill('Online','ok')}</td><td>2 menit lalu</td><td>${pill('Terkirim','ok')}</td><td>${pill('VClaim aktif','ok')}</td></tr>
+ <tr><td>Klinik Pratama</td><td>Klinik Pratama</td><td>${pill('Offline','bad')}</td><td>47 menit lalu</td><td>${pill('37 antre','warn')}</td><td>${pill('P-Care tertunda','warn')}</td></tr>
+ <tr><td>Apotek</td><td>Apotek</td><td>${pill('Online','ok')}</td><td>1 menit lalu</td><td>${pill('Terkirim','ok')}</td><td>${pill('PRB aktif','ok')}</td></tr></table></div></div>
+ <button class="btn" onclick="go('Manajemen Outlet','Tambah Outlet Baru')">Tambah outlet baru</button>`;
+ const apt=S.type==='apotek';
+ return `<div class="stats">${apt?stat('Transaksi hari ini','128')+stat('Penjualan','Rp 21,7 jt')+stat('Obat hampir expired','9'):stat('Pasien hari ini','146')+stat('Pendapatan','Rp 38,2 jt')+stat('Antrean poli','12')}${stat('Antre sinkron','0')}</div>
+ <div class="two"><div class="panel"><h2>Status koneksi</h2>${[['Internet','ok','Normal'],['VPS pusat','ok','Terhubung'],['SATUSEHAT','ok','Siap'],['BPJS Kesehatan','ok','Siap']].map(r=>`<div class="row"><span>${r[0]}</span>${pill(r[2],r[1])}</div>`).join('')}</div>
+ <div class="panel"><h2>Jika internet mati</h2><div class="empty">Semua menu tetap berjalan. Data disimpan di server lokal dan dikirim otomatis saat internet kembali.</div></div></div>`;
+}
+const USERS=[['Dr. Andi Wijaya','Dokter','Klinik Utama','Aktif','Tersinkron'],['Sari Lestari','Apoteker','Apotek','Aktif','Tersinkron'],['Rina Putri','Pendaftaran','Klinik Pratama','Aktif','Menunggu (offline)'],['Budi Santoso','Kasir','Klinik Utama','Nonaktif','Tersinkron']];
+function users(){
+ return `<div class="panel"><h2>Buat user baru <span class="sp"></span></h2><div class="form">
+ <label>Karyawan<select><option>Pilih karyawan</option><option>Dewi Anggraini</option></select></label>
+ <label>Outlet<select><option>Klinik Utama</option><option>Klinik Pratama</option><option>Apotek</option></select></label>
+ <label>Role<select><option>Dokter</option><option>Perawat</option><option>Apoteker</option><option>Kasir</option><option>Pendaftaran</option><option>Admin Outlet</option></select></label>
+ <label>Email / username<input placeholder="nama@klinik.id"></label>
+ <label>NIK (tenaga medis)<input inputmode="numeric" placeholder="16 digit"></label>
+ <label>No. STR / SIP<input placeholder="Untuk validasi IHS Practitioner"></label>
+ <label>Akses multi-outlet<select><option>Tidak</option><option>Ya</option></select></label>
+ <label>&nbsp;<button class="btn" onclick="toast('User dibuat dan dikirim ke server lokal')">Simpan dan sinkronkan</button></label></div></div>
+ <div class="panel"><h2>Daftar user</h2><div class="tw"><table><tr><th>Nama</th><th>Role</th><th>Outlet</th><th>Status</th><th>Sinkron ke lokal</th></tr>
+ ${USERS.map(u=>`<tr><td>${u[0]}</td><td>${u[1]}</td><td>${u[2]}</td><td>${pill(u[3],u[3]==='Aktif'?'ok':'bad')}</td><td>${pill(u[4],u[4]==='Tersinkron'?'ok':'warn')}</td></tr>`).join('')}</table></div></div>`;
+}
+function addOutlet(){
+ return `<div class="panel"><h2>Tambah outlet baru</h2><div class="form">
+ <label>Tipe outlet<select><option>Klinik Utama</option><option>Klinik Pratama</option><option>Apotek</option></select></label>
+ <label>Nama outlet<input placeholder="Klinik Cabang Bekasi"></label>
+ <label>NIB / izin operasional<input></label><label>Alamat<input></label>
+ <label>SATUSEHAT Organization ID<input></label><label>SATUSEHAT Location ID<input></label>
+ <label>Kode PPK BPJS<input></label><label>Email Admin Outlet<input></label>
+ <label>&nbsp;<button class="btn" onclick="toast('Outlet dibuat. Kode aktivasi: KLN-7QX2-A9')">Buat dan generate kode aktivasi</button></label></div>
+ <div class="empty">Menu outlet terbentuk otomatis dari template sesuai tipe.</div></div>`;
+}
+function render(){
+ $('where').textContent=S.mode==='cloud'?'Server pusat (VPS)':'Server lokal · '+OUT[S.type];
+ $('crumb').textContent=S.group;$('title').textContent=S.page;
+ const c=$('conn');c.textContent=S.mode==='cloud'?'2/3 outlet online':'Terhubung ke VPS';c.className='pill '+(S.mode==='cloud'?'warn':'ok');
+ const v=$('view');
+ if(S.page==='Manajemen User'||S.page==='Daftar User Outlet')v.innerHTML=users();
+ else if(S.page==='Tambah Outlet Baru')v.innerHTML=addOutlet();
+ else if(S.group.startsWith('Dashboard'))v.innerHTML=dash();
+ else v.innerHTML=`<div class="panel"><div class="empty">Halaman <b>${S.page}</b> belum dibuat. Struktur menu dan routing sudah siap.</div></div>`;
+ nav();
+}
+function go(g,p){S.group=g;S.page=p;render()}
+function setMode(m){S.mode=m;$('mCloud').classList.toggle('on',m==='cloud');$('mLocal').classList.toggle('on',m==='local');$('outlet').hidden=m==='cloud';const d=menu()[0];S.group=d.n;S.page=d.i[0];render()}
+$('mCloud').onclick=()=>setMode('cloud');$('mLocal').onclick=()=>setMode('local');
+$('outlet').onchange=e=>{S.type=e.target.value;setMode('local')};
+$('mb').onclick=()=>$('side').classList.toggle('open');
+$('theme').onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).colorScheme==='dark';r.dataset.theme=d?'light':'dark'};
+render();
+</script></body></html>
